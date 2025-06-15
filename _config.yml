@@ -1,0 +1,28 @@
+title: PicAbs Site
+email: your_email@example.com
+description: >-
+  Описание моего сайта
+baseurl: "" # если сайт по адресу https://username.github.io/,  оставь пустым
+url: "" # GitHub Pages сам определит URL
+author: Your Name
+
+# Отключаем стандартную тему
+theme:
+remote_theme: mmistakes/minimal-mistakes@master
+
+# Настройки Minimal Mistakes
+minimal_mistakes_skin: "aqua"
+locale: "ru_RU"
+
+# Навигация
+include:
+  - _pages
+exclude:
+  - Gemfile
+  - Gemfile.lock
+
+# Плагины
+plugins:
+  - jekyll-seo-tag
+  - jekyll-feed
+  - jekyll-sitemap
