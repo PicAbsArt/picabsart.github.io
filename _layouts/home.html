@@ -1,16 +1,20 @@
-<!DOCTYPE html>
-<html lang="ru">
-  {% include head.html %}
-  <body>
-    {% include masthead.html %}
-    <main id="main" class="main-content" tabindex="-1">
-      <div class="page-wrapper">
-        <article class="page-content">
-          <h1>Добро пожаловать!</h1>
-          <p>Это минимальная рабочая версия сайта на основе темы <strong>Minimal Mistakes</strong>.</p>
-        </article>
-      </div>
-    </main>
-    {% include footer.html %}
-  </body>
-</html>
+---
+layout: archive
+---
+
+{{ content }}
+
+<h3 class="archive__subtitle">{{ site.data.ui-text[site.locale].recent_posts | default: "Recent Posts" }}</h3>
+
+{% if paginator %}
+  {% assign posts = paginator.posts %}
+{% else %}
+  {% assign posts = site.posts %}
+{% endif %}
+
+{% assign entries_layout = page.entries_layout | default: 'list' %}
+<div class="entries-{{ entries_layout }}">
+  {% include documents-collection.html entries=posts type=entries_layout %}
+</div>
+
+{% include paginator.html %}

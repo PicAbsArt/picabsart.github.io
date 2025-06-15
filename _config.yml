@@ -1,28 +1,21 @@
-title: PicAbs Site
+title: My Awesome Site
 email: your_email@example.com
 description: >-
   Описание моего сайта
-baseurl: "" # если сайт по адресу https://username.github.io/,  оставь пустым
-url: "" # GitHub Pages сам определит URL
+baseurl: "" # если это picabsart.github.io — оставь пустым
+url: "" # GitHub сам определит URL
 author: Your Name
 
-# Отключаем стандартную тему
-theme:
-remote_theme: mmistakes/minimal-mistakes@master
+# Настройки пагинации
+paginate: 5
+paginate_path: "/blog/page:num/"
 
-# Настройки Minimal Mistakes
-minimal_mistakes_skin: "aqua"
-locale: "ru_RU"
-
-# Навигация
-include:
-  - _pages
-exclude:
-  - Gemfile
-  - Gemfile.lock
+# SEO
+logo: "/assets/images/logo.png"
 
 # Плагины
 plugins:
-  - jekyll-seo-tag
-  - jekyll-feed
+  - jekyll-paginate
   - jekyll-sitemap
+  - jekyll-feed
+  - jekyll-seo-tag
