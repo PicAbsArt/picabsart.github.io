@@ -2,180 +2,48 @@
 layout: default
 ---
 
-<div class="gallery">
-  <h1>{{ page.title }}</h1>
+<style>
+.gallery {
+  max-width: 900px;
+  margin: auto;
+  padding: 2rem;
+}
 
-  {% for painting in site.data.paintings %}
+.painting {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.painting h2 {
+  margin-top: 0;
+}
+
+.thumbnail {
+  max-width: 100%;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.thumbnail:hover {
+  transform: scale(1.02);
+}
+</style>
+
+<div class="gallery">
+  <h1>Галерея</h1>
+
+  {% for painting in site.paintings %}
     <div class="painting">
       <h2>{{ painting.title }}</h2>
       <p>{{ painting.description }}</p>
 
-      <!-- Превью -->
-      <img src="{{ painting.images[0] }}" alt="Превью" class="preview-img" onclick="openModal('{{ painting.title }}', {{ forloop.index0 }})">
+      <a href="{{ painting.url }}">
+        <img src="{{ painting.images[0] }}" alt="{{ painting.title }}" class="thumbnail">
+      </a>
     </div>
   {% endfor %}
 </div>
-
-<!-- Модальное окно -->
-<div id="modal" class="modal">
-  <div class="modal-content">
-    <span class="close" onclick="closeModal()">&times;</span>
-    <button class="prev" onclick="prevImage()">❮</button>
-    <img id="modal-img" src="" />
-    <button class="next" onclick="nextImage()">❯</button>
-    <div class="caption" id="modal-caption"></div>
-    <div class="counter" id="modal-counter"></div>
-  </div>
-</div>
-
-<style>
-.modal {
-  display: none;
-  position: fixed;
-  z-index: 999;
-  padding-top: 60px;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  overflow: auto;
-  background-color: rgba(0,0,0,0.9);
-}
-
-.modal-content {
-  margin: auto;
-  display: block;
-  max-width: 90%;
-  max-height: 80vh;
-  text-align: center;
-  position: relative;
-}
-
-#modal-img {
-  max-width: 100%;
-  max-height: 70vh;
-  border-radius: 8px;
-}
-
-.prev, .next {
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  font-size: 40px;
-  color: white;
-  background: rgba(0,0,0,0.5);
-  border: none;
-  padding: 10px;
-  border-radius: 50%;
-}
-
-.prev { left: 20px; }
-.next { right: 20px; }
-
-.close {
-  position: absolute;
-  top: 20px;
-  right: 45px;
-  font-size: 40px;
-  font-weight: bold;
-  color: #fff;
-  cursor: pointer;
-}
-
-.counter {
-  color: white;
-  margin-top: 10px;
-}
-</style>
-
-<script>
-// Переносим данные картин из Jekyll в JS
-const paintings = [
-  {% for painting in site.data.paintings %}
-  {
-    title: "{{ painting.title }}",
-    images: [
-      {% for image in painting.images %}
-        "{{ image }}",
-      {% endfor %}
-    ]
-  },
-  {% endfor %}
-];
-
-let currentPaintingIndex = 0;
-let currentImageIndex = 0;
-
-// Для определения свайпа
-let touchstartX = 0;
-let touchendX = 0;
-
-function openModal(title, index) {
-  currentPaintingIndex = index;
-  currentImageIndex = 0;
-  const modal = document.getElementById("modal");
-  const img = document.getElementById("modal-img");
-  const caption = document.getElementById("modal-caption");
-  const counter = document.getElementById("modal-counter");
-
-  img.src = paintings[index].images[currentImageIndex];
-  caption.innerText = title;
-  updateCounter();
-
-  // Добавляем обработчики жестов
-  const modalImg = document.getElementById("modal-img");
-  modalImg.addEventListener('touchstart', handleTouchStart, false);
-  modalImg.addEventListener('touchend', handleTouchEnd, false);
-
-  modal.style.display = "block";
-}
-
-function closeModal() {
-  document.getElementById("modal").style.display = "none";
-}
-
-function prevImage() {
-  if (currentImageIndex > 0) {
-    currentImageIndex--;
-    document.getElementById("modal-img").src = paintings[currentPaintingIndex].images[currentImageIndex];
-    updateCounter();
-  }
-}
-
-function nextImage() {
-  if (currentImageIndex < paintings[currentPaintingIndex].images.length - 1) {
-    currentImageIndex++;
-    document.getElementById("modal-img").src = paintings[currentPaintingIndex].images[currentImageIndex];
-    updateCounter();
-  }
-}
-
-function updateCounter() {
-  document.getElementById("modal-counter").innerText =
-    `${currentImageIndex + 1} из ${paintings[currentPaintingIndex].images.length}`;
-}
-
-// 🖱️ Обработка свайпа
-function handleTouchStart(event) {
-  touchstartX = event.changedTouches[0].screenX;
-}
-
-function handleTouchEnd(event) {
-  touchendX = event.changedTouches[0].screenX;
-  handleSwipe();
-}
-
-function handleSwipe() {
-  const swipeThreshold = 30; // Минимальное расстояние свайпа
-  const deltaX = touchendX - touchstartX;
-
-  if (deltaX > swipeThreshold) {
-    prevImage(); // Свайп вправо → предыдущее фото
-  }
-
-  if (deltaX < -swipeThreshold) {
-    nextImage(); // Свайп влево → следующее фото
-  }
-}
-</script>
