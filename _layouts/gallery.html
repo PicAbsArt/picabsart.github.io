@@ -128,4 +128,22 @@ function closeModal() {
 
 function prevImage() {
   if (currentImageIndex > 0) {
-    currentImage
+    currentImageIndex--;
+    document.getElementById("modal-img").src = paintings[currentPaintingIndex].images[currentImageIndex];
+    updateCounter();
+  }
+}
+
+function nextImage() {
+  if (currentImageIndex < paintings[currentPaintingIndex].images.length - 1) {
+    currentImageIndex++;
+    document.getElementById("modal-img").src = paintings[currentPaintingIndex].images[currentImageIndex];
+    updateCounter();
+  }
+}
+
+function updateCounter() {
+  document.getElementById("modal-counter").innerText =
+    `${currentImageIndex + 1} из ${paintings[currentPaintingIndex].images.length}`;
+}
+</script>
