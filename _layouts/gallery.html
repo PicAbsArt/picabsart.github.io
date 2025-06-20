@@ -4,15 +4,21 @@ layout: default
 
 <div class="gallery">
   <h1>{{ page.title }}</h1>
+
   {% for painting in site.data.paintings %}
     <div class="painting">
       <h2>{{ painting.title }}</h2>
       <p>{{ painting.description }}</p>
-      <div class="gallery-images">
-        {% for image in painting.images %}
-          <img src="{{ image }}" alt="{{ painting.title }}">
-        {% endfor %}
-      </div>
+
+      <!-- Превью картины -->
+      <a href="{{ painting.images[0] }}" data-lightbox="{{ painting.title }}" data-title="{{ painting.title }}">
+        <img src="{{ painting.images[0] }}" alt="{{ painting.title }}" style="cursor: pointer; max-width: 300px;">
+      </a>
+
+      <!-- Скрытые остальные фото для просмотра в Lightbox -->
+      {% for image in painting.images offset:1 %}
+        <a href="{{ image }}" data-lightbox="{{ painting.title }}" data-title="{{ painting.title }}" style="display:none;"></a>
+      {% endfor %}
     </div>
   {% endfor %}
 </div>
