@@ -1,46 +1,12 @@
 ---
 layout: default
 ---
-
-<style>
-.gallery {
-  max-width: 900px;
-  margin: auto;
-  padding: 2rem;
-}
-
-.painting {
-  background: white;
-  border-radius: 10px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-  margin-bottom: 2rem;
-  padding: 1.5rem;
-  text-align: center;
-}
-
-.painting h2 {
-  margin-top: 0;
-}
-
-.thumbnail {
-  max-width: 100%;
-  border-radius: 8px;
-  transition: transform 0.3s ease;
-}
-
-.thumbnail:hover {
-  transform: scale(1.02);
-}
-</style>
-
 <div class="gallery">
   <h1>Галерея</h1>
-
   {% for painting in site.paintings %}
     <div class="painting">
       <h2>{{ painting.title }}</h2>
       <p>{{ painting.description }}</p>
-
       <a href="{{ painting.url }}">
         <img src="{{ painting.images[0] }}" alt="{{ painting.title }}" class="thumbnail">
       </a>
