@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>{{ site.title }}{% if page.title %} | {{ page.title }}{% endif %}</title>
+  <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+  {% include header.html %}
+  <div class="page-content">
+    {{ content }}
+  </div>
+</body>
+</html>
