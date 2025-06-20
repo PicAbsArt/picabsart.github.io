@@ -1,0 +1,8 @@
+- name: Галерея
+  link: /
+
+- name: О себе
+  link: /about/
+
+- name: Контакты
+  link: /contact/
