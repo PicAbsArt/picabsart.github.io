@@ -1,24 +1,21 @@
----
-layout: default
----
+<!DOCTYPE html>
+<html lang="ru">
+  {% include head.html %}
+  <body>
+    <a class="skip-to-content" href="#main">Перейти к содержанию</a>
 
-<div class="gallery">
-  <h1>{{ page.title }}</h1>
+    <header class="site-header" role="banner">
+      <div class="wrapper site-header-inner">
+        <h1 class="site-title"><a href="{{ '/' | relative_url }}" rel="home">{{ site.title | escape }}</a></h1>
+      </div>
+    </header>
 
-  {% for painting in site.data.paintings %}
-    <div class="painting">
-      <h2>{{ painting.title }}</h2>
-      <p>{{ painting.description }}</p>
+    <main id="main" class="page-content" role="main">
+      <div class="wrapper">
+        {{ content }}
+      </div>
+    </main>
 
-      {% if painting.images.size > 0 %}
-        {% for image in painting.images %}
-          <a href="{{ image }}" data-lightbox="{{ painting.title | slugify }}" data-title="{{ painting.title }}">
-            {% if forloop.first %}
-              <img src="{{ image }}" alt="{{ painting.title }}" style="max-width: 300px; cursor: pointer;">
-            {% endif %}
-          </a>
-        {% endfor %}
-      {% endif %}
-    </div>
-  {% endfor %}
-</div>
+    {% include footer.html %}
+  </body>
+</html>
