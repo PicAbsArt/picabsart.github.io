@@ -1,0 +1,163 @@
+---
+layout: default
+---
+
+<style>
+.painting-page {
+  max-width: 900px;
+  margin: auto;
+  padding: 2rem;
+}
+
+.thumbnails {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.thumbnail {
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: border 0.3s;
+  max-width: 100%;
+}
+
+.thumbnail:hover {
+  border-color: #666;
+}
+
+/* Модальное окно */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  padding-top: 60px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.9);
+}
+
+.modal-content {
+  margin: auto;
+  display: block;
+  max-width: 90%;
+  max-height: 80vh;
+  text-align: center;
+  position: relative;
+}
+
+#modal-img {
+  max-width: 100%;
+  max-height: 70vh;
+  border-radius: 8px;
+}
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 40px;
+  color: white;
+  background: rgba(0,0,0,0.5);
+  border: none;
+  padding: 10px;
+  border-radius: 50%;
+}
+
+.prev { left: 20px; }
+.next { right: 20px; }
+
+.close {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 40px;
+  font-weight: bold;
+  color: #fff;
+  cursor: pointer;
+}
+</style>
+
+<div class="painting-page">
+  <h1>{{ page.title }}</h1>
+  <p>{{ page.description }}</p>
+
+  <div class="thumbnails">
+    {% for image in page.images %}
+      <img src="{{ image }}" alt="Фото {{ page.title }}" class="thumbnail" onclick="openModal({{ forloop.index0 }})">
+    {% endfor %}
+  </div>
+</div>
+
+<!-- Модальное окно -->
+<div id="modal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <button class="prev" onclick="prevImage()">❮</button>
+    <img id="modal-img" src="" />
+    <button class="next" onclick="nextImage()">❯</button>
+  </div>
+</div>
+
+<script>
+const images = [
+  {% for image in page.images %}
+    "{{ image }}",
+  {% endfor %}
+];
+
+let currentIndex = 0;
+
+function openModal(index) {
+  currentIndex = index;
+  document.getElementById("modal-img").src = images[currentIndex];
+  document.getElementById("modal").style.display = "block";
+}
+
+function closeModal() {
+  document.getElementById("modal").style.display = "none";
+}
+
+function prevImage() {
+  if (currentIndex > 0) {
+    currentIndex--;
+    document.getElementById("modal-img").src = images[currentIndex];
+  }
+}
+
+function nextImage() {
+  if (currentIndex < images.length - 1) {
+    currentIndex++;
+    document.getElementById("modal-img").src = images[currentIndex];
+  }
+}
+
+// Свайп
+let touchstartX = 0;
+let touchendX = 0;
+
+document.getElementById("modal-img")?.addEventListener('touchstart', e => {
+  touchstartX = e.changedTouches[0].screenX;
+});
+
+document.getElementById("modal-img")?.addEventListener('touchend', e => {
+  touchendX = e.changedTouches[0].screenX;
+  handleSwipe();
+});
+
+function handleSwipe() {
+  const swipeThreshold = 30;
+  const deltaX = touchendX - touchstartX;
+
+  if (deltaX > swipeThreshold) {
+    prevImage(); // Свайп вправо → предыдущее фото
+  } else if (deltaX < -swipeThreshold) {
+    nextImage(); // Свайп влево → следующее фото
+  }
+}
+</script>
