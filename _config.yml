@@ -2,11 +2,11 @@ title: Pictura Abstracta
 email: your@email.com
 description: Абстрактная интерьерная живопись
 baseurl: ""
-url: ""
+url: "https://piabsart.github.io/art-site"
 author: Марина Балик
 
 # Тема
-theme: jekyll-theme-midnight
+theme: minima
 
 # Коллекции
 collections:
