@@ -1,31 +1,58 @@
-<!DOCTYPE html>
-<html lang="ru">
-  {% include head.html %}
+<header class="site-header">
+  <div class="wrapper">
+    <h1 class="site-title">
+      <a href="/">{{ site.title }}</a>
+    </h1>
 
-  <body>
-    <header class="site-header">
-      <div class="wrapper">
-        <h1 class="site-title">
-          <a href="/">{{ site.title }}</a>
-        </h1>
+    <!-- Меню -->
+    <nav class="site-nav">
+      {% for item in site.data.menu %}
+        <a 
+          class="nav-link{% if page.url == item.link %} active{% endif %}" 
+          href="{{ item.link }}">{{ item.name }}</a>
+      {% endfor %}
+    </nav>
+  </div>
+</header>
 
-        <!-- Меню -->
-        <nav class="site-nav">
-          {% for item in site.data.menu %}
-            <a 
-              class="nav-link{% if page.url == item.link %} active{% endif %}" 
-              href="{{ item.link }}">{{ item.name }}</a>
-          {% endfor %}
-        </nav>
-      </div>
-    </header>
+<style>
+.site-header {
+  background-color: #1e1e1e;
+  color: white;
+  padding: 1.5rem 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  font-family: 'IBM Plex Sans', sans-serif;
+}
 
-    <main class="page-content" role="main">
-      <div class="wrapper">
-        {{ content }}
-      </div>
-    </main>
+.site-title {
+  margin: 0;
+  font-size: 1.8rem;
+  font-weight: 600;
+}
 
-    {% include footer.html %}
-  </body>
-</html>
+.site-title a {
+  color: white;
+  text-decoration: none;
+}
+
+.site-nav {
+  margin-top: 1rem;
+}
+
+.nav-link {
+  color: #c6c6c6;
+  text-decoration: none;
+  margin: 0 1rem;
+  font-weight: 400;
+  transition: color 0.2s ease;
+}
+
+.nav-link:hover {
+  color: white;
+}
+
+.nav-link.active {
+  color: #0f9d58;
+  font-weight: 600;
+}
+</style>
