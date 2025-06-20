@@ -9,3 +9,7 @@ github_username:  picabsart
 theme: minima
 plugins:
   - jekyll-feed
+collections:
+  paintings:
+    output: true
+    permalink: /painting/:name/
