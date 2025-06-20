@@ -1,6 +1,5 @@
 ---
 title: Закат над морем
-slug: sunset
 description: Картина маслом на холсте, 2024 год.
 layout: painting
 images:
