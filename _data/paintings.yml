@@ -1,0 +1,11 @@
+- title: "Закат над морем"
+  description: "Картина маслом на холсте, 2024 год."
+  images:
+    - "/assets/images/sunset1.jpg"
+    - "/assets/images/sunset2.jpg"
+
+- title: "Лесная тропинка"
+  description: "Акварель, 2023 год."
+  images:
+    - "/assets/images/forest1.jpg"
+    - "/assets/images/forest2.jpg"
