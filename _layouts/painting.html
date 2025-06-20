@@ -1,31 +1,14 @@
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{{ page.title }}</title>
-  <link rel="stylesheet" href="/assets/main.css">
-</head>
-<body style="font-family: sans-serif; margin: 0; padding: 0; background: #f9f9f9;">
+---
+layout: default
+---
 
-  <header style="background: #222; color: white; padding: 1rem; text-align: center;">
-    <h1><a href="/" style="color: white; text-decoration: none;">Picabs — Художник</a></h1>
-  </header>
+<h1>{{ page.title }}</h1>
+<p><em>{{ page.description }}</em></p>
 
-  <main style="padding: 2rem; max-width: 900px; margin: auto;">
-    <h1>{{ page.title }}</h1>
-    <p><em>{{ page.description }}</em></p>
+{% if page.images %}
+  {% for image in page.images %}
+    <img src="{{ image }}" alt="Изображение {{ page.title }}" style="max-width: 100%; margin: 1rem 0;">
+  {% endfor %}
+{% endif %}
 
-    {% if page.images %}
-      {% for image in page.images %}
-        <img src="{{ image }}" alt="Изображение {{ page.title }}" style="max-width: 100%; margin: 1rem 0; border-radius: 8px;">
-      {% endfor %}
-    {% endif %}
-  </main>
-
-  <footer style="text-align: center; padding: 2rem; font-size: 0.9rem; color: #666;">
-    &copy; {{ site.time | date: "%Y" }} Picabs — Все права защищены.
-  </footer>
-
-</body>
-</html>
+<p><a href="/">← Назад к галерее</a></p>
