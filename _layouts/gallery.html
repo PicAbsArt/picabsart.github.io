@@ -10,15 +10,15 @@ layout: default
       <h2>{{ painting.title }}</h2>
       <p>{{ painting.description }}</p>
 
-      <!-- Превью картины -->
-      <a href="{{ painting.images[0] }}" data-lightbox="{{ painting.title }}" data-title="{{ painting.title }}">
-        <img src="{{ painting.images[0] }}" alt="{{ painting.title }}" style="cursor: pointer; max-width: 300px;">
-      </a>
-
-      <!-- Скрытые остальные фото для просмотра в Lightbox -->
-      {% for image in painting.images offset:1 %}
-        <a href="{{ image }}" data-lightbox="{{ painting.title }}" data-title="{{ painting.title }}" style="display:none;"></a>
-      {% endfor %}
+      {% if painting.images.size > 0 %}
+        {% for image in painting.images %}
+          <a href="{{ image }}" data-lightbox="{{ painting.title | slugify }}" data-title="{{ painting.title }}">
+            {% if forloop.first %}
+              <img src="{{ image }}" alt="{{ painting.title }}" style="max-width: 300px; cursor: pointer;">
+            {% endif %}
+          </a>
+        {% endfor %}
+      {% endif %}
     </div>
   {% endfor %}
 </div>
