@@ -7,5 +7,3 @@ images:
   - /assets/images/sunset1.jpg
   - /assets/images/sunset2.jpg
 ---
-
-Это описание картины. Опционально — можешь написать текст здесь.
