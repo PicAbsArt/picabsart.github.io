@@ -1,7 +1,41 @@
 <!-- _includes/footer.html -->
 <footer class="site-footer">
   <div class="wrapper">
-    <p>&copy; {{ site.time | date: "%Y" }} {{ site.title }}</p>
-    <p>{{ site.description }}</p>
+    <p class="footer-title">{{ site.title }}</p>
+    <p class="footer-description">{{ site.description }}</p>
+    <p class="footer-copyright">&copy; {{ site.time | date: "%Y" }} {{ site.title }}</p>
   </div>
 </footer>
+
+<style>
+.site-footer {
+  background-color: #161616;
+  color: #c6c6c6;
+  padding: 2rem 0;
+  font-family: 'IBM Plex Sans', sans-serif;
+}
+
+.wrapper {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  text-align: center;
+}
+
+.footer-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: white;
+}
+
+.footer-description {
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+.footer-copyright {
+  font-size: 0.8rem;
+  color: #6f6f6f;
+}
+</style>
