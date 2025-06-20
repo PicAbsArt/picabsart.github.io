@@ -6,7 +6,7 @@ url: ""
 author: Марина Балик
 
 # Тема
-theme: minima
+theme: minima-dark
 
 # Коллекции
 collections:
