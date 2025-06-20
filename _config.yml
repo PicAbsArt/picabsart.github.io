@@ -1,19 +1,11 @@
-title: Pictura Abstracta
-email: your@email.com
-description: Абстрактная интерьерная живопись
-baseurl: ""
-url: "https://picabs.ru"
-author: Марина Балик
-
-# Тема
+title: Picabs - Художник
+email: example@example.com
+description: >-
+  Лучшие картины маслом и акварелью от художника Picabs
+baseurl: "/"
+url: "https://picabs.ru" 
+twitter_username: picabs
+github_username:  picabsart
 theme: minima
-
-# Коллекции
-collections:
-  paintings:
-    output: true
-    permalink: /gallery/:path/
-
-# Пользовательские данные
-sass:
-  sass_dir: _sass
+plugins:
+  - jekyll-feed
