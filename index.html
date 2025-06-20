@@ -1,5 +1,15 @@
 ---
-layout: gallery
-title: Галерея
-permalink: /
+layout: default
 ---
+
+<h1>Галерея</h1>
+
+{% for painting in site.data.paintings %}
+  <div class="painting" style="margin-bottom: 2rem;">
+    <h2>{{ painting.title }}</h2>
+    <p>{{ painting.description }}</p>
+    <a href="/painting/{{ painting.slug }}/">
+      <img src="{{ painting.images[0] }}" alt="{{ painting.title }}" style="max-width: 300px; cursor: pointer;">
+    </a>
+  </div>
+{% endfor %}
