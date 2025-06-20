@@ -1,0 +1,6 @@
+- name: О себе
+  link: /about/
+- name: Галерея
+  link: /gallery/
+- name: Статьи
+  link: /articles/
