@@ -7,4 +7,3 @@ images:
   - /assets/images/forest1.jpg
   - /assets/images/forest2.jpg
 ---
-какой-то текст
