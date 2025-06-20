@@ -1,3 +1,4 @@
+# Базовые настройки
 title: Picabs - абстрактная интерьерная живопись
 email: example@example.com
 description: >-
@@ -6,9 +7,14 @@ baseurl: "/"
 url: "https://picabs.ru" 
 twitter_username: picabs
 github_username:  picabsart
+
+# Тема
 theme: minima
 plugins:
   - jekyll-feed
+  - jekyll-seo-tag
+
+# Настройка коллекций
 collections:
   paintings:
     output: true
