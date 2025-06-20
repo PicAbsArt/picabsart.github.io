@@ -1,0 +1,19 @@
+title: Pictura Abstracta
+email: your@email.com
+description: Абстрактная интерьерная живопись
+baseurl: ""
+url: ""
+author: Марина Балик
+
+# Тема
+theme: minima
+
+# Коллекции
+collections:
+  paintings:
+    output: true
+    permalink: /gallery/:path/
+
+# Пользовательские данные
+sass:
+  sass_dir: _sass
