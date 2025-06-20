@@ -107,6 +107,10 @@ const paintings = [
 let currentPaintingIndex = 0;
 let currentImageIndex = 0;
 
+// Для определения свайпа
+let touchstartX = 0;
+let touchendX = 0;
+
 function openModal(title, index) {
   currentPaintingIndex = index;
   currentImageIndex = 0;
@@ -118,6 +122,11 @@ function openModal(title, index) {
   img.src = paintings[index].images[currentImageIndex];
   caption.innerText = title;
   updateCounter();
+
+  // Добавляем обработчики жестов
+  const modalImg = document.getElementById("modal-img");
+  modalImg.addEventListener('touchstart', handleTouchStart, false);
+  modalImg.addEventListener('touchend', handleTouchEnd, false);
 
   modal.style.display = "block";
 }
@@ -145,5 +154,28 @@ function nextImage() {
 function updateCounter() {
   document.getElementById("modal-counter").innerText =
     `${currentImageIndex + 1} из ${paintings[currentPaintingIndex].images.length}`;
+}
+
+// 🖱️ Обработка свайпа
+function handleTouchStart(event) {
+  touchstartX = event.changedTouches[0].screenX;
+}
+
+function handleTouchEnd(event) {
+  touchendX = event.changedTouches[0].screenX;
+  handleSwipe();
+}
+
+function handleSwipe() {
+  const swipeThreshold = 30; // Минимальное расстояние свайпа
+  const deltaX = touchendX - touchstartX;
+
+  if (deltaX > swipeThreshold) {
+    prevImage(); // Свайп вправо → предыдущее фото
+  }
+
+  if (deltaX < -swipeThreshold) {
+    nextImage(); // Свайп влево → следующее фото
+  }
 }
 </script>
