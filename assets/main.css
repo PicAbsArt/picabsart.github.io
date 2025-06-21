@@ -155,23 +155,11 @@ img {
 /* === Футер === */
 
 .site-footer {
-  background-color: #161616;
-  color: #c6c6c6;
+  background-color: #000000;
+  color: #FFFFFF;
   padding: 2rem 0;
-  font-size: 0.85rem;
+  font-size: 0.5rem;
   text-align: center;
-}
-
-.footer-title {
-  margin: 0 0 0.5rem;
-  font-size: 1.1rem;
-  font-weight: 600;
-  color: white;
-}
-
-.footer-description {
-  margin-bottom: 0.5rem;
-  color: #c6c6c6;
 }
 
 .footer-copyright {
