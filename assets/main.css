@@ -1,14 +1,14 @@
-/* === Общие стили === */
+/* === Общие настройки === */
 
 body {
   margin: 0;
   font-family: 'IBM Plex Sans', sans-serif;
-  color: #e0e0e0;
-  background-color: #161616;
+  color: #333;
+  background-color: #f9f9f9;
 }
 
 a {
-  color: #78a9ff;
+  color: #0078d4;
   text-decoration: none;
 }
 
@@ -18,104 +18,24 @@ a:hover {
 
 img {
   display: block;
+  max-width: 100%;
   height: auto;
+  border-radius: 6px;
 }
 
-/* === Контент === */
-
-.wrapper {
-  max-width: 960px;
-  margin: 0 auto;
-  padding: 0 1rem;
-}
-
-.page-content {
-  background-color: #212121;
-  padding: 2rem 0;
-  border-top: 1px solid #393939;
-  border-bottom: 1px solid #393939;
-}
-
-/* === Галерея === */
-
-.gallery h1 {
-  text-align: center;
-  margin-bottom: 2rem;
-}
-
-.painting {
-  background: #1e1e1e;
-  border-radius: 10px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
-  margin-bottom: 2rem;
-  padding: 1.5rem;
-  text-align: center;
-}
-
-.painting h2 {
-  margin: 0 0 0.5rem;
-  font-size: 1.2rem;
-  font-weight: 600;
-  color: white;
-}
-
-.painting p {
-  margin: 0 0 1rem;
-  color: #c6c6c6;
-  font-size: 0.95rem;
-}
-
-.thumbnail {
-  max-width: 100%;
-  border-radius: 8px;
-  transition: transform 0.3s ease;
-}
-
-.thumbnail:hover {
-  transform: scale(1.02);
-}
-
-/* === Страница картины === */
-
-.painting-page h1 {
-  margin-top: 0;
-  font-size: 1.5rem;
-  font-weight: 600;
-  color: white;
-}
-
-.painting-page em {
-  display: block;
-  margin-bottom: 1rem;
-  color: #c6c6c6;
-  font-size: 0.95rem;
-}
-
-.painting-page img {
-  max-width: 100%;
-  margin: 1rem 0;
-  border-radius: 8px;
-}
-
-.back-link {
-  display: inline-block;
-  margin-top: 1rem;
-  color: #78a9ff;
-  font-weight: 500;
-  text-decoration: none;
-}
-
-.back-link:hover {
-  text-decoration: underline;
-}
-
-/* === Шапка === */
+/* === Шапка сайта (header) === */
 
 .site-header {
   background-color: #1e1e1e;
   color: white;
   padding: 1.5rem 0;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.wrapper {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 1rem;
 }
 
 .site-title {
@@ -128,8 +48,6 @@ img {
   color: white;
   text-decoration: none;
 }
-
-/* === Меню === */
 
 .site-nav {
   margin-top: 1rem;
@@ -152,19 +70,101 @@ img {
   font-weight: 600;
 }
 
+/* === Основной контент === */
+
+.page-content {
+  background-color: #ffffff;
+  padding: 2rem 0;
+  border-top: 1px solid #e0e0e0;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.gallery h1 {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #1e1e1e;
+}
+
+.painting {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  text-align: center;
+  border: 1px solid #eee;
+}
+
+.painting h2 {
+  margin: 0 0 0.5rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #1e1e1e;
+}
+
+.painting p {
+  margin: 0 0 1rem;
+  color: #666;
+  font-size: 0.95rem;
+}
+
+.thumbnail {
+  max-width: 100%;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.thumbnail:hover {
+  transform: scale(1.02);
+}
+
+/* === Страница картины === */
+
+.painting-page h1 {
+  margin-top: 0;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #1e1e1e;
+}
+
+.painting-page em {
+  display: block;
+  margin-bottom: 1rem;
+  color: #777;
+  font-size: 0.95rem;
+}
+
+.painting-page img {
+  max-width: 100%;
+  margin: 1rem 0;
+  border-radius: 8px;
+}
+
+.back-link {
+  display: inline-block;
+  margin-top: 1rem;
+  color: #0078d4;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.back-link:hover {
+  text-decoration: underline;
+}
+
 /* === Футер === */
 
 .site-footer {
   background-color: #161616;
-  color: #6f6f6f;
+  color: #c6c6c6;
   padding: 2rem 0;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   text-align: center;
 }
 
 .footer-title {
   margin: 0 0 0.5rem;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   font-weight: 600;
   color: white;
 }
