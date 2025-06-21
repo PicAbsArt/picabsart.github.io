@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html lang="ru">
+  {% include head.html %}
   <body>
     {% include header.html %}
+
     <main class="page-content" role="main">
       <div class="wrapper">
         {{ content }}
       </div>
     </main>
+
     {% include footer.html %}
   </body>
 </html>
