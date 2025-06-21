@@ -164,6 +164,37 @@ img {
   text-decoration: underline;
 }
 
+/* === Статьи === */
+
+.article-list {
+  list-style: none;
+  padding: 0;
+}
+
+.article-item {
+  margin-bottom: 2rem;
+  border-bottom: 1px solid #e0e0e0;
+  padding-bottom: 1rem;
+}
+
+.article-item h2 {
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.article-description,
+.post-description {
+  color: #666;
+  margin: 0.5rem 0;
+}
+
+.article-meta,
+.post-meta {
+  font-size: 0.9rem;
+  color: #999;
+}
+
 /* === Футер === */
 
 .site-footer {
