@@ -3,13 +3,18 @@ layout: default
 ---
 <div class="gallery">
   <h1>Галерея</h1>
-  {% for painting in site.paintings %}
-    <div class="painting">
-      <h2>{{ painting.title }}</h2>
-      <p>{{ painting.description }}</p>
-      <a href="{{ painting.url }}">
-        <img src="{{ painting.images[0] }}" alt="{{ painting.title }}" class="thumbnail">
-      </a>
-    </div>
-  {% endfor %}
+
+  {% if site.paintings.size > 0 %}
+    {% for painting in site.paintings %}
+      <div class="painting">
+        <h2>{{ painting.title }}</h2>
+        <p>{{ painting.description }}</p>
+        <a href="{{ painting.url }}">
+          <img src="{{ painting.images[0] }}" alt="{{ painting.title }}" class="thumbnail">
+        </a>
+      </div>
+    {% endfor %}
+  {% else %}
+    <p>Картины пока не добавлены.</p>
+  {% endif %}
 </div>
