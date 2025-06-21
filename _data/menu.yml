@@ -1,8 +1,11 @@
-- name: О себе
-  link: /about/
-
 - name: Галерея
   link: /
+
+- name: Статьи
+  link: /articles/
+
+- name: О себе
+  link: /about/
 
 - name: Контакты
   link: /contact/
