@@ -178,6 +178,21 @@ img {
   color: #6f6f6f;
 }
 
+.footer-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 0.5rem;
+}
+
+.footer-row .footer-title,
+.footer-row .footer-description {
+  margin: 0;
+  font-size: 0.95rem;
+}
+
 /* === Адаптивность === */
 
 @media (max-width: 600px) {
