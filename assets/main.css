@@ -109,7 +109,7 @@ img {
   font-size: 0.95rem;
 }
 
-.thumbnail {
+.thumbnail_old {
   display: block;
   max-width: 100%;
   height: auto;
@@ -117,6 +117,17 @@ img {
   margin-right: auto;
   border-radius: 8px;
   transition: transform 0.3s ease;
+}
+
+.thumbnail {
+  max-width: 95vw; /* Почти вся ширина экрана */
+  max-height: 90vh; /* Почти вся высота экрана */
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  border-radius: 8px;
+  margin: 1rem auto;
+  display: block;
 }
 
 .thumbnail:hover {
