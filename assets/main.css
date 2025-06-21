@@ -162,35 +162,8 @@ img {
   text-align: center;
 }
 
-.footer-title {
-  margin: 0 0 0.5rem;
-  font-size: 1.1rem;
-  font-weight: 600;
-  color: white;
-}
-
-.footer-description {
-  margin-bottom: 0.5rem;
-  color: #c6c6c6;
-}
-
 .footer-copyright {
   color: #6f6f6f;
-}
-
-.footer-row {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 1rem;
-  flex-wrap: wrap;
-  margin-bottom: 0.5rem;
-}
-
-.footer-row .footer-title,
-.footer-row .footer-description {
-  margin: 0;
-  font-size: 0.95rem;
 }
 
 /* === Адаптивность === */
