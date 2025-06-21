@@ -217,30 +217,7 @@ img {
 }
 
 
-.gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap: 2rem;
-  padding: 2rem;
-  max-width: 1200px;
-  margin: auto;
-}
-
-.painting {
-  background: #fff;
-  border-radius: 10px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-  padding: 1.5rem;
-  text-align: center;
-  transition: transform 0.3s ease;
-}
-
-.painting:hover {
-  transform: scale(1.02);
-}
-
-/* === Галерея картинок на странице картины === */
-
+/* === Галерея картины (сетка 2 колонки) === */
 .painting-images {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -250,8 +227,80 @@ img {
 
 .thumbnail {
   width: 100%;
-  height: auto;
   max-width: 100%;
+  height: auto;
   border-radius: 8px;
   object-fit: contain;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.thumbnail:hover {
+  transform: scale(1.02);
+}
+
+/* === Модальное окно (полноэкранный просмотр) === */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  padding-top: 60px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+.modal-content {
+  margin: auto;
+  display: block;
+  max-width: 90%;
+  max-height: 85vh;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+/* Кнопки навигации */
+.modal-prev,
+.modal-next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.6);
+  border: none;
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+  transition: background-color 0.3s ease;
+}
+
+.modal-prev:hover,
+.modal-next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.modal-prev {
+  left: 20px;
+}
+
+.modal-next {
+  right: 20px;
+}
+
+/* Кнопка закрытия */
+.modal-close {
+  position: absolute;
+  top: 20px;
+  right: 40px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  z-index: 2000;
 }
