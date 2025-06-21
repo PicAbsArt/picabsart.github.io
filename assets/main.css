@@ -2,13 +2,13 @@
 
 body {
   margin: 0;
-  font-family: 'Segoe UI', sans-serif;
-  color: #333;
-  background-color: #f9f9f9;
+  font-family: 'IBM Plex Sans', sans-serif;
+  color: #e0e0e0;
+  background-color: #161616;
 }
 
 a {
-  color: #0078d4;
+  color: #78a9ff;
   text-decoration: none;
 }
 
@@ -18,8 +18,8 @@ a:hover {
 
 img {
   display: block;
-  max-width: 100%;
   height: auto;
+  max-width: 100%;
   border-radius: 6px;
 }
 
@@ -75,11 +75,129 @@ img {
 /* === Контент === */
 
 .page-content {
-  background-color: #ffffff;
+  background-color: #212121;
   padding: 2rem 0;
-  border-top: 1px solid #e0e0e0;
-  border-bottom: 1px solid #e0e0e0;
+  border-top: 1px solid #393939;
+  border-bottom: 1px solid #393939;
 }
+
+/* === Галерея картины (сетка изображений) === */
+
+.painting-images {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.thumbnail {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: contain;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.thumbnail:hover {
+  transform: scale(1.02);
+}
+
+/* === Модальное окно (полноэкранный просмотр) === */
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  padding-top: 60px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+.modal-content {
+  margin: auto;
+  display: block;
+  max-width: 90%;
+  max-height: 85vh;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+/* Кнопки навигации */
+.modal-prev,
+.modal-next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.4); /* Более прозрачные кнопки */
+  border: none;
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+  transition: background-color 0.3s ease;
+}
+
+.modal-prev:hover,
+.modal-next:hover {
+  background-color: rgba(0, 0, 0, 0.6); /* Темнее при наведении */
+}
+
+.modal-prev {
+  left: 20px;
+}
+
+.modal-next {
+  right: 20px;
+}
+
+/* Кнопка закрытия */
+.modal-close {
+  position: absolute;
+  top: 20px;
+  right: 40px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  z-index: 2000;
+}
+
+/* === Футер === */
+
+.site-footer {
+  background-color: #161616;
+  color: #6f6f6f;
+  padding: 2rem 0;
+  font-size: 0.85rem;
+  text-align: center;
+}
+
+.footer-title {
+  margin: 0 0 0.5rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: white;
+}
+
+.footer-description {
+  margin-bottom: 0.5rem;
+  color: #c6c6c6;
+}
+
+.footer-copyright {
+  color: #6f6f6f;
+}
+
+/* === Галерея на главной странице === */
 
 .gallery h1 {
   text-align: center;
@@ -87,51 +205,25 @@ img {
 }
 
 .painting {
-  background: #fff;
+  background: #1e1e1e;
   border-radius: 10px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
   margin-bottom: 2rem;
   padding: 1.5rem;
   text-align: center;
-  border: 1px solid #eee;
 }
 
 .painting h2 {
   margin: 0 0 0.5rem;
   font-size: 1.2rem;
   font-weight: 600;
-  color: #1e1e1e;
+  color: white;
 }
 
 .painting p {
   margin: 0 0 1rem;
-  color: #666;
+  color: #c6c6c6;
   font-size: 0.95rem;
-}
-
-.thumbnail_old {
-  display: block;
-  max-width: 100%;
-  height: auto;
-  margin-left: auto;
-  margin-right: auto;
-  border-radius: 8px;
-  transition: transform 0.3s ease;
-}
-
-.thumbnail {
-  max-width: 95vw; /* Почти вся ширина экрана */
-  max-height: 90vh; /* Почти вся высота экрана */
-  width: auto;
-  height: auto;
-  object-fit: contain;
-  border-radius: 8px;
-  margin: 1rem auto;
-  display: block;
-}
-
-.thumbnail:hover {
-  transform: scale(1.02);
 }
 
 /* === Страница картины === */
@@ -140,33 +232,20 @@ img {
   margin-top: 0;
   font-size: 1.5rem;
   font-weight: 600;
-  color: #1e1e1e;
+  color: white;
 }
 
 .painting-page em {
   display: block;
   margin-bottom: 1rem;
-  color: #777;
+  color: #c6c6c6;
   font-size: 0.95rem;
-}
-
-.painting-page img {
-  max-width: 100%;
-  margin: 1rem 0;
-}
-
-.painting-images {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1rem;
-  margin-top: 2rem;
 }
 
 .back-link {
   display: inline-block;
   margin-top: 1rem;
-  color: #0078d4;
+  color: #78a9ff;
   font-weight: 500;
   text-decoration: none;
 }
@@ -175,52 +254,7 @@ img {
   text-decoration: underline;
 }
 
-/* === Статьи === */
-
-.article-list {
-  list-style: none;
-  padding: 0;
-}
-
-.article-item {
-  margin-bottom: 2rem;
-  border-bottom: 1px solid #e0e0e0;
-  padding-bottom: 1rem;
-}
-
-.article-item h2 {
-  margin: 0;
-  font-size: 1.2rem;
-  font-weight: 600;
-}
-
-.article-description,
-.post-description {
-  color: #666;
-  margin: 0.5rem 0;
-}
-
-.article-meta,
-.post-meta {
-  font-size: 0.9rem;
-  color: #999;
-}
-
-/* === Футер === */
-
-.site-footer {
-  background-color: #161616;
-  color: #c6c6c6;
-  padding: 2rem 0;
-  font-size: 0.85rem;
-  text-align: center;
-}
-
-.footer-copyright {
-  color: #6f6f6f;
-}
-
-/* === Адаптивность === */
+/* === Адаптивность (мобильные устройства) === */
 
 @media (max-width: 600px) {
   .nav-link {
@@ -235,48 +269,15 @@ img {
   .thumbnail {
     max-width: 100%;
   }
-}
 
+  .modal-prev,
+  .modal-next {
+    width: 40px;
+    height: 40px;
+  }
 
-.gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap: 2rem;
-  padding: 2rem;
-  max-width: 1200px;
-  margin: auto;
-}
-
-.painting {
-  background: #fff;
-  border-radius: 10px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-  padding: 1.5rem;
-  text-align: center;
-  transition: transform 0.3s ease;
-}
-
-.painting:hover {
-  transform: scale(1.02);
-}
-
-.thumbnail {
-  max-width: 100%;
-  height: auto;
-  border-radius: 8px;
-}
-
-
-.painting-images {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 1.5rem;
-  margin-top: 2rem;
-}
-
-.thumbnail {
-  max-width: 100%;
-  height: auto;
-  border-radius: 8px;
-  object-fit: contain;
+  .modal-close {
+    right: 20px;
+    top: 15px;
+  }
 }
