@@ -236,3 +236,32 @@ img {
     max-width: 100%;
   }
 }
+
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 2rem;
+  padding: 2rem;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.painting {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  padding: 1.5rem;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.painting:hover {
+  transform: scale(1.02);
+}
+
+.thumbnail {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
