@@ -3,12 +3,12 @@
 body {
   margin: 0;
   font-family: 'IBM Plex Sans', sans-serif;
-  color: #e0e0e0;
-  background-color: #161616;
+  color: #333;
+  background-color: #f9f9f9;
 }
 
 a {
-  color: #78a9ff;
+  color: #0078d4;
   text-decoration: none;
 }
 
@@ -23,7 +23,7 @@ img {
   border-radius: 6px;
 }
 
-/* === Шапка === */
+/* === Шапка (темная) === */
 
 .site-header {
   background-color: #1e1e1e;
@@ -72,22 +72,45 @@ img {
   font-weight: 600;
 }
 
-/* === Контент === */
+/* === Основной контент (светлый фон) === */
 
 .page-content {
-  background-color: #212121;
+  background-color: #ffffff;
   padding: 2rem 0;
-  border-top: 1px solid #393939;
-  border-bottom: 1px solid #393939;
+  border-top: 1px solid #e0e0e0;
+  border-bottom: 1px solid #e0e0e0;
 }
 
-/* === Галерея картины (сетка изображений) === */
+/* === Галерея картины (сетка из 2 колонок) === */
 
-.painting-images {
+.gallery {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 1.5rem;
-  margin-top: 2rem;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.painting {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  text-align: center;
+  border: 1px solid #eee;
+}
+
+.painting h2 {
+  margin: 0 0 0.5rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #1e1e1e;
+}
+
+.painting p {
+  margin: 0 0 1rem;
+  color: #666;
+  font-size: 0.95rem;
 }
 
 .thumbnail {
@@ -104,7 +127,16 @@ img {
   transform: scale(1.02);
 }
 
-/* === Модальное окно (полноэкранный просмотр) === */
+/* === Страница картины === */
+
+.painting-images {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+/* === Полноэкранный просмотр картинок === */
 
 .modal {
   display: none;
@@ -135,7 +167,7 @@ img {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background-color: rgba(0, 0, 0, 0.4); /* Более прозрачные кнопки */
+  background-color: rgba(0, 0, 0, 0.4); /* Прозрачные кнопки */
   border: none;
   border-radius: 50%;
   width: 48px;
@@ -149,7 +181,7 @@ img {
 
 .modal-prev:hover,
 .modal-next:hover {
-  background-color: rgba(0, 0, 0, 0.6); /* Темнее при наведении */
+  background-color: rgba(0, 0, 0, 0.6);
 }
 
 .modal-prev {
@@ -171,7 +203,7 @@ img {
   z-index: 2000;
 }
 
-/* === Футер === */
+/* === Футер (темный) === */
 
 .site-footer {
   background-color: #161616;
@@ -197,64 +229,7 @@ img {
   color: #6f6f6f;
 }
 
-/* === Галерея на главной странице === */
-
-.gallery h1 {
-  text-align: center;
-  margin-bottom: 2rem;
-}
-
-.painting {
-  background: #1e1e1e;
-  border-radius: 10px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
-  margin-bottom: 2rem;
-  padding: 1.5rem;
-  text-align: center;
-}
-
-.painting h2 {
-  margin: 0 0 0.5rem;
-  font-size: 1.2rem;
-  font-weight: 600;
-  color: white;
-}
-
-.painting p {
-  margin: 0 0 1rem;
-  color: #c6c6c6;
-  font-size: 0.95rem;
-}
-
-/* === Страница картины === */
-
-.painting-page h1 {
-  margin-top: 0;
-  font-size: 1.5rem;
-  font-weight: 600;
-  color: white;
-}
-
-.painting-page em {
-  display: block;
-  margin-bottom: 1rem;
-  color: #c6c6c6;
-  font-size: 0.95rem;
-}
-
-.back-link {
-  display: inline-block;
-  margin-top: 1rem;
-  color: #78a9ff;
-  font-weight: 500;
-  text-decoration: none;
-}
-
-.back-link:hover {
-  text-decoration: underline;
-}
-
-/* === Адаптивность (мобильные устройства) === */
+/* === Адаптивность для мобильных устройств === */
 
 @media (max-width: 600px) {
   .nav-link {
