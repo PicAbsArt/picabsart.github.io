@@ -1,20 +1,24 @@
-/* assets/main.css */
 body {
-  margin: 0;
   font-family: 'IBM Plex Sans', sans-serif;
-  background-color: #f4f4f4;
   color: #161616;
-}
-
-main.page-content {
-  background-color: #ffffff;
-  padding: 2rem 0;
-  border-top: 1px solid #e0e0e0;
-  border-bottom: 1px solid #e0e0e0;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
 }
 
 .wrapper {
   max-width: 960px;
   margin: 0 auto;
   padding: 0 1rem;
+}
+
+/* Только заголовки по центру */
+.gallery h1,
+.painting h2 {
+  text-align: center;
+}
+
+/* Все параграфы и текст — по левому краю */
+p, .painting p {
+  text-align: left;
 }
