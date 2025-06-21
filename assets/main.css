@@ -1,10 +1,27 @@
+/* === Общие стили === */
+
 body {
-  font-family: 'IBM Plex Sans', sans-serif;
-  color: #161616;
-  background-color: #f4f4f4;
   margin: 0;
-  padding: 0;
+  font-family: 'IBM Plex Sans', sans-serif;
+  color: #e0e0e0;
+  background-color: #161616;
 }
+
+a {
+  color: #78a9ff;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+img {
+  display: block;
+  height: auto;
+}
+
+/* === Контент === */
 
 .wrapper {
   max-width: 960px;
@@ -12,13 +29,168 @@ body {
   padding: 0 1rem;
 }
 
-/* Только заголовки по центру */
-.gallery h1,
-.painting h2 {
+.page-content {
+  background-color: #212121;
+  padding: 2rem 0;
+  border-top: 1px solid #393939;
+  border-bottom: 1px solid #393939;
+}
+
+/* === Галерея === */
+
+.gallery h1 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.painting {
+  background: #1e1e1e;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+  margin-bottom: 2rem;
+  padding: 1.5rem;
   text-align: center;
 }
 
-/* Все параграфы и текст — по левому краю */
-p, .painting p {
-  text-align: left;
+.painting h2 {
+  margin: 0 0 0.5rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: white;
+}
+
+.painting p {
+  margin: 0 0 1rem;
+  color: #c6c6c6;
+  font-size: 0.95rem;
+}
+
+.thumbnail {
+  max-width: 100%;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.thumbnail:hover {
+  transform: scale(1.02);
+}
+
+/* === Страница картины === */
+
+.painting-page h1 {
+  margin-top: 0;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: white;
+}
+
+.painting-page em {
+  display: block;
+  margin-bottom: 1rem;
+  color: #c6c6c6;
+  font-size: 0.95rem;
+}
+
+.painting-page img {
+  max-width: 100%;
+  margin: 1rem 0;
+  border-radius: 8px;
+}
+
+.back-link {
+  display: inline-block;
+  margin-top: 1rem;
+  color: #78a9ff;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.back-link:hover {
+  text-decoration: underline;
+}
+
+/* === Шапка === */
+
+.site-header {
+  background-color: #1e1e1e;
+  color: white;
+  padding: 1.5rem 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.site-title {
+  margin: 0;
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+.site-title a {
+  color: white;
+  text-decoration: none;
+}
+
+/* === Меню === */
+
+.site-nav {
+  margin-top: 1rem;
+}
+
+.nav-link {
+  color: #c6c6c6;
+  text-decoration: none;
+  margin: 0 1rem;
+  font-weight: 400;
+  transition: color 0.2s ease;
+}
+
+.nav-link:hover {
+  color: white;
+}
+
+.nav-link.active {
+  color: #0f9d58;
+  font-weight: 600;
+}
+
+/* === Футер === */
+
+.site-footer {
+  background-color: #161616;
+  color: #6f6f6f;
+  padding: 2rem 0;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+.footer-title {
+  margin: 0 0 0.5rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: white;
+}
+
+.footer-description {
+  margin-bottom: 0.5rem;
+  color: #c6c6c6;
+}
+
+.footer-copyright {
+  color: #6f6f6f;
+}
+
+/* === Адаптивность (мобильные устройства) === */
+
+@media (max-width: 600px) {
+  .nav-link {
+    margin: 0 0.5rem;
+    font-size: 0.9rem;
+  }
+
+  .painting h2 {
+    font-size: 1rem;
+  }
+
+  .thumbnail {
+    max-width: 100%;
+  }
 }
