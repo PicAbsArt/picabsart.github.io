@@ -19,3 +19,6 @@ collections:
   paintings:
     output: true
     permalink: /painting/:name/
+  articles:
+    output: true
+    permalink: /article/:name/
