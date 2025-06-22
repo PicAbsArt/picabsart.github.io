@@ -347,9 +347,9 @@ img {
   }
 
   .footer-copyright {
-    margin-top: 1rem;
     text-align: center;
     font-size: 0.9rem;
+    white-space: nowrap;
   }
 }
 
