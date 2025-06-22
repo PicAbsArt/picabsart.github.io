@@ -291,6 +291,25 @@ img {
   color: #6f6f6f;
 }
 
+.footer-logo {
+  margin-right: 1rem;
+}
+
+.footer-logo img {
+  vertical-align: middle;
+  height: 24px;
+  width: auto;
+}
+
+.footer-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+}
+
 /* === Адаптивность для мобильных устройств === */
 
 @media (max-width: 600px) {
