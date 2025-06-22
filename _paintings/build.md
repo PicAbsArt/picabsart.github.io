@@ -12,7 +12,11 @@ marketplace_links:
   - name: "Avito"
     icon: "/assets/icons/avito.svg"
     url: "https://www.avito.ru/..." 
-  - name: "Saatchi Art"
-    icon: "/assets/icons/saatchi.svg"
-    url: "https://www.saatchiart.com/..." 
+  - name: "ARTDOART"
+    icon: "/assets/icons/artdoart.jpg"
+    url: "https://artdoart.com/..." 
+  - name: "BORSCH"
+    icon: "/assets/icons/borsch.png"
+    url: "https://borsch.gallery/..." 
 ---
+https://artnow.ru/
