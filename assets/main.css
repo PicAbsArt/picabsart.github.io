@@ -113,7 +113,6 @@ img {
 @media (max-width: 768px) {
   .menu-toggle {
     display: flex;
-    position: absolute;
     right: 2rem;
     top: 1.5rem;
   }
