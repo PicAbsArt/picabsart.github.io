@@ -1,5 +1,17 @@
+<!-- _includes/footer.html -->
 <footer class="site-footer">
   <div class="wrapper">
-    <p class="footer-copyright">&copy; {{ site.time | date: "%Y" }} {{ site.title }} - {{ site.description }}</p>
+    <div class="footer-row">
+      <!-- Логотип -->
+      <div class="footer-logo">
+        <img src="{{ site.logo }}" alt="Логотип {{ site.title }}" width="40" height="40">
+      </div>
+
+      <!-- Название и описание -->
+      <span class="footer-title">{{ site.title }}</span>
+      <span class="footer-description">{{ site.description }}</span>
+    </div>
+
+    <p class="footer-copyright">&copy; {{ site.time | date: "%Y" }} {{ site.title }}</p>
   </div>
 </footer>
