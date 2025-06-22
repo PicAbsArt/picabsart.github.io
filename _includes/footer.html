@@ -2,17 +2,17 @@
 <footer class="site-footer">
   <div class="footer-container">
     <!-- Логотип -->
-    <div class="footer-logo">
-      <img src="{{ site.logo }}" alt="Логотип {{ site.title }}" width="40" height="40">
-    </div>
+    <span class="footer-logo">
+      <img src="{{ site.logo }}" alt="Логотип {{ site.title }}" width="64" height="64">
+    </span>
 
     <!-- Заголовок и описание -->
-    <div class="footer-info">
-      <span class="footer-title">{{ site.title }}</span>
-      <p class="footer-description">{{ site.description }}</p>
-    </div>
+    <span class="footer-info">
+      <span class="footer-title">{{ site.title }} - </span>
+      <span class="footer-description">{{ site.description }}</span>
+    </span>
 
     <!-- Копирайт -->
-    <div class="footer-copyright">&copy; {{ site.time | date: "%Y" }} {{ site.title }}</div>
+    <span class="footer-copyright">&copy; {{ site.time | date: "%Y" }} {{ site.title }}</span>
   </div>
 </footer>
