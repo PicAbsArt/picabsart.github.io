@@ -6,4 +6,9 @@ date: 2001-01-04
 images:
   - /assets/images/sunset1.jpg
   - /assets/images/sunset2.jpg
+marketplace_links:
+  - name: "Avito"
+    url: "https://www.avito.ru/..." 
+  - name: "Saatchi Art"
+    url: "https://www.saatchiart.com/..." 
 ---
