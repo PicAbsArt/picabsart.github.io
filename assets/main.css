@@ -101,6 +101,7 @@ img {
   border: none;
   cursor: pointer;
   z-index: 1000;
+  position: relative;
 }
 
 .menu-toggle span {
@@ -137,7 +138,6 @@ img {
     display: flex;
   }
 }
-
 /* === Основной контент (светлый фон) === */
 
 .page-content {
