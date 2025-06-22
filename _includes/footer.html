@@ -1,17 +1,18 @@
 <!-- _includes/footer.html -->
 <footer class="site-footer">
-  <div class="wrapper">
-    <div class="footer-row">
-      <!-- Логотип -->
-      <div class="footer-logo">
-        <img src="{{ site.logo }}" alt="Логотип {{ site.title }}" width="40" height="40">
-      </div>
-
-      <!-- Название и описание -->
-      <span class="footer-title">{{ site.title }}</span>
-      <span class="footer-description">{{ site.description }}</span>
+  <div class="footer-container">
+    <!-- Логотип -->
+    <div class="footer-logo">
+      <img src="{{ site.logo }}" alt="Логотип {{ site.title }}" width="40" height="40">
     </div>
 
-    <p class="footer-copyright">&copy; {{ site.time | date: "%Y" }} {{ site.title }}</p>
+    <!-- Заголовок и описание -->
+    <div class="footer-info">
+      <span class="footer-title">{{ site.title }}</span>
+      <p class="footer-description">{{ site.description }}</p>
+    </div>
+
+    <!-- Копирайт -->
+    <div class="footer-copyright">&copy; {{ site.time | date: "%Y" }} {{ site.title }}</div>
   </div>
 </footer>
