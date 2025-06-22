@@ -23,6 +23,12 @@ img {
   border-radius: 6px;
 }
 
+.wrapper {
+  max-width: 960px;
+  margin: auto;
+  padding: 0 1rem;
+}
+
 /* === Шапка (темная) === */
 
 .site-header {
