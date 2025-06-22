@@ -46,10 +46,21 @@ img {
   padding: 0 1rem;
 }
 
+.site-logo {
+  height: 24px;
+  width: auto;
+  vertical-align: middle;
+  margin-right: 0.5rem;
+}
+
 .site-title {
+  display: flex;
+  align-items: center;
   margin: 0;
   font-size: 1.4rem;
   font-weight: 600;
+  color: white;
+  text-decoration: none;
 }
 
 .site-title a {
