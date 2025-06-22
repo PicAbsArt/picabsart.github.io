@@ -6,4 +6,5 @@ images:
   - /assets/images/build/1.jpg
   - /assets/images/build/2.jpg
   - /assets/images/build/3.jpg
+  - /assets/images/build/4.jpg
 ---
