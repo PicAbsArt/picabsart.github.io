@@ -2,6 +2,7 @@
 title: Стройка
 description: Картина маслом на холсте, 2024 год.
 layout: painting
+date: 2001-01-01
 images:
   - /assets/images/build/1.JPG
   - /assets/images/build/2.JPG
