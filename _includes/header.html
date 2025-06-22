@@ -1,9 +1,10 @@
 <!-- _includes/header.html -->
 <header class="site-header">
   <div class="header-wrapper">
-    <h1 class="site-title">
-      <a href="/">{{ site.title }}</a>
-    </h1>
+    <a href="/" class="site-title">
+      <img src="{{ site.logo }}" alt="Логотип" class="site-logo">
+      {{ site.title }}
+    </a>
 
     <nav class="site-nav">
       {% for item in site.data.menu %}
