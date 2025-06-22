@@ -265,7 +265,7 @@ img {
   z-index: 2000;
 }
 
-/* === Футер (темный) === */
+/* === Футер === */
 
 .site-footer {
   background-color: #161616;
@@ -275,24 +275,15 @@ img {
   text-align: center;
 }
 
-.footer-title {
-  margin: 0 0 0.5rem;
-  font-size: 1.1rem;
-  font-weight: 600;
-  color: white;
-}
-
-.footer-description {
-  margin-bottom: 0.5rem;
-  color: #c6c6c6;
-}
-
-.footer-copyright {
-  color: #6f6f6f;
-}
-
-.footer-logo {
-  margin-right: 1rem;
+.footer-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  max-width: 960px;
+  margin: auto;
+  padding: 2rem 1rem;
 }
 
 .footer-logo img {
@@ -301,13 +292,25 @@ img {
   width: auto;
 }
 
-.footer-row {
+.footer-info {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  gap: 1rem;
-  margin-bottom: 1rem;
-  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.footer-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: white;
+}
+
+.footer-description {
+  color: #c6c6c6;
+}
+
+.footer-copyright {
+  color: #6f6f6f;
 }
 
 /* === Адаптивность для мобильных устройств === */
