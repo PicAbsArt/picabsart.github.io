@@ -8,7 +8,7 @@ body {
 }
 
 a {
-  color: #0078d4;
+  color: #d42800;
   text-decoration: none;
 }
 
@@ -85,7 +85,7 @@ img {
 }
 
 .nav-link.active {
-  color: #0f9d58;
+  color: #fac341;
   font-weight: 600;
 }
 
