@@ -101,6 +101,7 @@ img {
   border: none;
   cursor: pointer;
   z-index: 1000;
+  position: relative;
 }
 
 .menu-toggle span {
@@ -115,7 +116,10 @@ img {
     display: flex;
     position: absolute;
     right: 2rem;
-    top: 1.5rem;
+    top: 50%;
+    transform: translateY(-50%); /* Выравнивание по вертикали */
+    width: 32px;
+    height: 24px;
   }
 
   .site-nav {
