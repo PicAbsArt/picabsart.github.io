@@ -28,11 +28,13 @@ img {
 .site-header {
   background-color: #1e1e1e;
   color: white;
-  padding: 1.5rem 0;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  padding: 0.8rem 0; /* Уменьшили высоту */
 }
 
-.wrapper {
+.header-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   max-width: 960px;
   margin: auto;
   padding: 0 1rem;
@@ -40,7 +42,7 @@ img {
 
 .site-title {
   margin: 0;
-  font-size: 1.8rem;
+  font-size: 1.4rem;
   font-weight: 600;
 }
 
@@ -49,16 +51,14 @@ img {
   text-decoration: none;
 }
 
-/* === Меню === */
-
 .site-nav {
-  margin-top: 1rem;
+  display: flex;
+  gap: 1rem;
 }
 
 .nav-link {
   color: #c6c6c6;
   text-decoration: none;
-  margin: 0 1rem;
   font-weight: 400;
   transition: color 0.2s ease;
 }
