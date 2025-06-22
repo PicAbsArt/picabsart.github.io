@@ -5,6 +5,7 @@ description: >-
   Абстрактная интерьерная живопись Марины Балик
 baseurl: "/"
 url: "https://picabs.ru" 
+logo: "/assets/images/picabs_logo.png"
 twitter_username: picabs
 github_username:  picabsart
 
