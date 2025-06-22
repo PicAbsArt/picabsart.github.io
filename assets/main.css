@@ -257,7 +257,7 @@ img {
   }
 }
 
-/* === Ссылки на маркетплейсы === */
+/* === Ссылки на маркетплейсы с иконками === */
 
 .marketplace-links {
   margin-top: 1rem;
@@ -268,14 +268,24 @@ img {
 }
 
 .marketplace-link {
+  display: inline-flex;
+  align-items: center;
   background-color: #f0f0f0;
   color: #333;
   padding: 0.4rem 0.8rem;
   border-radius: 999px;
   font-size: 0.85rem;
   transition: background-color 0.3s ease;
+  text-decoration: none;
+  gap: 0.5rem;
 }
 
 .marketplace-link:hover {
   background-color: #e0e0e0;
+}
+
+.marketplace-icon {
+  width: 16px;
+  height: 16px;
+  vertical-align: middle;
 }
