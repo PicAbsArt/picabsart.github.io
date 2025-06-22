@@ -101,7 +101,6 @@ img {
   border: none;
   cursor: pointer;
   z-index: 1000;
-  position: relative;
 }
 
 .menu-toggle span {
@@ -116,10 +115,7 @@ img {
     display: flex;
     position: absolute;
     right: 2rem;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 32px;
-    height: 24px;
+    top: 1.5rem;
   }
 
   .site-nav {
@@ -138,6 +134,7 @@ img {
     display: flex;
   }
 }
+
 /* === Основной контент (светлый фон) === */
 
 .page-content {
