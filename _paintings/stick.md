@@ -9,4 +9,9 @@ images:
   - /assets/images/stick/3.JPG
   - /assets/images/stick/4.JPG
   - /assets/images/stick/5.JPG
+marketplace_links:
+  - name: "Avito"
+    url: "https://www.avito.ru/..." 
+  - name: "Saatchi Art"
+    url: "https://www.saatchiart.com/..." 
 ---
