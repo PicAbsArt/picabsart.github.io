@@ -11,7 +11,4 @@ marketplace_links:
   - name: "Avito"
     icon: "/assets/icons/avito.svg"
     url: "https://www.avito.ru/..." 
-  - name: "Saatchi Art"
-    icon: "/assets/icons/saatchi.svg"
-    url: "https://www.saatchiart.com/..." 
 ---
