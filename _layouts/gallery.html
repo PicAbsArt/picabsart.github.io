@@ -15,20 +15,21 @@ permalink: /
         <img src="{{ painting.images[0] }}" alt="{{ painting.title }}" class="thumbnail">
       </a>
       <!-- Ссылки на маркетплейсы -->
-      {% if painting.marketplace_links %}
-        <div class="marketplace-links">
-          {% for link in painting.marketplace_links %}
-            <a 
-              href="{{ link.url }}" 
-              target="_blank" 
-              rel="noopener noreferrer" 
-              class="marketplace-link"
-            >
-              {{ link.name }}
-            </a>
-          {% endfor %}
-        </div>
-      {% endif %}      
+{% if painting.marketplace_links %}
+  <div class="marketplace-links">
+    {% for link in painting.marketplace_links %}
+      <a 
+        href="{{ link.url }}" 
+        target="_blank" 
+        rel="noopener noreferrer" 
+        class="marketplace-link"
+      >
+        <img src="{{ link.icon }}" alt="{{ link.name }}" class="marketplace-icon">
+        {{ link.name }}
+      </a>
+    {% endfor %}
+  </div>
+{% endif %}
     </div>
   {% endfor %}
 </div>
