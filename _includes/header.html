@@ -6,6 +6,14 @@
       {{ site.title }}
     </a>
 
+    <!-- Бургер-меню для мобильных -->
+    <button class="menu-toggle" aria-label="Открыть меню">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <!-- Меню -->
     <nav class="site-nav">
       {% for item in site.data.menu %}
         <a 
