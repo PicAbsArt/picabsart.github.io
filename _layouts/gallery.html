@@ -4,8 +4,10 @@ title: Галерея
 permalink: /
 ---
 
+{% assign sorted_paintings = site.paintings | sort: 'date' | reverse %}
+
 <div class="gallery">
-  {% for painting in site.paintings %}
+  {% for painting in sorted_paintings %}
     <div class="painting">
       <h2>{{ painting.title }}</h2>
       <p>{{ painting.description }}</p>
