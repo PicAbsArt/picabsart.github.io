@@ -101,7 +101,6 @@ img {
   border: none;
   cursor: pointer;
   z-index: 1000;
-  position: relative;
 }
 
 .menu-toggle span {
