@@ -6,14 +6,14 @@ permalink: /contact/
 
 <h2>Если у тебя есть вопросы о картинах, заказах или сотрудничестве —</h2>
 
-<h2>свяжись со мной напрямую:</h2>
+<h3>свяжись со мной напрямую:</h3>
 <ul class="contact-links">
   <li><a href="mailto:picabsart@gmail.com">📧 Email: picabsart@gmail.com</a></li>
-  <li><a href="https://t.me/picabs"  target="_blank">💬 Telegram: picabs</a></li>
-  <li><a href="https://www.instagram.com/picabs/"  target="_blank">📷 Instagram: picabs</a></li>
+  <li><a href="https://t.me/picabsart"  target="_blank">💬 Telegram: picabsart</a></li>
+  <li><a href="https://www.instagram.com/picabsart/"  target="_blank">📷 Instagram: picabsart</a></li>
 </ul>
 
-<h2>или заполни форму ниже:</h2>
+<h3>или заполни форму ниже:</h3>
 <form action="https://formspree.io/f/xdkzwwdv"  method="POST">
   <div class="form-group">
     <label for="name">Ваше имя</label>
@@ -26,7 +26,7 @@ permalink: /contact/
   </div>
 
   <div class="form-group">
-    <label for="message">Ваше сообщение</button>
+    <label for="message">Ваше сообщение</label>
     <textarea id="message" name="message" rows="5" required></textarea>
   </div>
 
