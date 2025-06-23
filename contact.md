@@ -1,12 +1,12 @@
 ---
 layout: default
 title: Контакты
-permalink: /contact/xdkzwwdv
+permalink: /contact/
 ---
 
 <p>Если у тебя есть вопросы о картинах, заказах или сотрудничестве — заполни форму ниже.</p>
 
-<form action="https://formspree.io/f/your-form-id"  method="POST">
+<form action="https://formspree.io/f/xdkzwwdv"  method="POST">
   <div class="form-group">
     <label for="name">Ваше имя</label>
     <input type="text" id="name" name="name" required>
