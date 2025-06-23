@@ -414,22 +414,27 @@ img {
   vertical-align: middle;
 }
 
-/* === Форма связи FormSpree === */
+/* === Форма связи === */
 
-.contact-form {
+form {
   max-width: 600px;
   margin-bottom: 2rem;
 }
 
-.contact-form label {
+.form-group {
   display: block;
-  margin-top: 1rem;
-  font-weight: 500;
-  color: #e0e0e0;
+  margin-bottom: 1.5rem;
 }
 
-.contact-form input,
-.contact-form textarea {
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+.form-group input,
+.form-group textarea {
+  display: block;
   width: 100%;
   padding: 0.75rem;
   border-radius: 6px;
@@ -437,27 +442,11 @@ img {
   background-color: #fff;
   color: #1e1e1e;
   font-size: 1rem;
-  margin-top: 0.5rem;
 }
 
-.contact-form textarea {
+.form-group textarea {
   resize: vertical;
   min-height: 100px;
-}
-
-.btn-submit {
-  margin-top: 1rem;
-  padding: 0.75rem 1.5rem;
-  background-color: #0078d4;
-  color: white;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.btn-submit:hover {
-  background-color: #005fa3;
 }
 
 /* === Ссылки на контактные площадки === */
