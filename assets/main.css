@@ -413,3 +413,69 @@ img {
   height: 16px;
   vertical-align: middle;
 }
+
+/* === Форма связи === */
+
+.contact-form {
+  max-width: 600px;
+  margin-bottom: 2rem;
+}
+
+.contact-form label {
+  display: block;
+  margin-top: 1rem;
+  font-weight: 500;
+  color: #e0e0e0;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  color: #1e1e1e;
+  font-size: 1rem;
+  margin-top: 0.5rem;
+}
+
+.contact-form textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.btn-submit {
+  margin-top: 1rem;
+  padding: 0.75rem 1.5rem;
+  background-color: #0078d4;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-submit:hover {
+  background-color: #005fa3;
+}
+
+/* === Ссылки на контактные площадки === */
+
+.contact-links {
+  list-style: none;
+  padding: 0;
+}
+
+.contact-links li {
+  margin-bottom: 0.5rem;
+}
+
+.contact-links a {
+  color: #0078d4;
+  text-decoration: none;
+}
+
+.contact-links a:hover {
+  text-decoration: underline;
+}
