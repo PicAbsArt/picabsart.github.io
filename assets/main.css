@@ -311,6 +311,8 @@ img {
   font-size: 1.1rem;
   font-weight: 600;
   color: white;
+  font-family: 'Major Mono Display', monospace;
+  text-decoration: none;
 }
 
 .footer-separator {
