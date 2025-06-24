@@ -61,6 +61,8 @@ img {
   font-weight: 600;
   color: white;
   text-decoration: none;
+  font-family: 'Major Mono Display', monospace;
+  letter-spacing: 1px;
 }
 
 .site-title a {
