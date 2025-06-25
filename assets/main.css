@@ -32,7 +32,7 @@ img {
 /* === Шапка (темная) === */
 
 .site-header {
-  background: linear-gradient(to bottom, #000000, #505050);
+  background: linear-gradient(to bottom, #202020, #505050);
   color: white;
   padding: 0.8rem 0; /* Уменьшили высоту */
 }
@@ -270,7 +270,7 @@ img {
 /* === Футер (десктоп) === */
 
 .site-footer {
-  background: linear-gradient(to bottom, #000000, #505050);
+  background: linear-gradient(to bottom, #505050, #202020);
   color: #6f6f6f;
   padding: 1rem 0;
   font-size: 0.85rem;
