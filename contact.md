@@ -10,7 +10,6 @@ permalink: /contact/
 <ul class="contact-links">
   <li><a href="mailto:picabsart@gmail.com">📧 Email: picabsart@gmail.com</a></li>
   <li><a href="https://t.me/picabsart"  target="_blank">💬 Telegram: picabsart</a></li>
-  <li><a href="https://www.instagram.com/picabsart/"  target="_blank">📷 Instagram: picabsart</a></li>
 </ul>
 
 <h3>или заполни форму ниже:</h3>
