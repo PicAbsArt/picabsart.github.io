@@ -15,5 +15,5 @@ images:
 marketplace_links:
   - name: "Avito"
     icon: "/assets/icons/avito.svg"
-    url: "https://www.avito.ru/"
+    url: "https://www.avito.ru/moskva/mebel_i_interer/interernaya_kartina_abstraktsiya_40h50_7273029123?utm_campaign=native&utm_medium=item_page_android&utm_source=soc_sharing_seller"
 ---
