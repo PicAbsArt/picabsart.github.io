@@ -1,8 +1,8 @@
 ---
 title: Композиция №28
-description: Холст, акрил, акриловый лак, 40х50 см.
+description: Холст на подрамнике 40х50 см, акрил, глянцевый лак.
 layout: painting
-date: 2024-08-08
+date: 2024-08-10
 images:
   - /assets/images/comp_28/1.png
   - /assets/images/comp_28/2.png
