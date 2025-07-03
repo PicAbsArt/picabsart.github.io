@@ -623,3 +623,39 @@ h2 {
 .contact-icons a:hover {
   color: #005fa3;
 }
+
+/* === Секция "Статьи" === */
+
+.articles-list {
+  max-width: 960px;
+  margin: auto;
+  padding: 2rem 1rem;
+}
+
+.article-item {
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+  border-left: 4px solid #0078d4;
+}
+
+.article-item:hover {
+  transform: scale(1.01);
+  background-color: #f4f4f4;
+}
+
+.article-item h2 a {
+  color: #1e1e1e;
+  text-decoration: none;
+}
+
+.article-item h2 a:hover {
+  text-decoration: underline;
+}
+
+.article-item p {
+  color: #666;
+}
