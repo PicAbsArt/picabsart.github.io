@@ -528,7 +528,6 @@ section {
 /* === Эффект "растворения" для текста "О себе" === */
 
 .gradient-text {
-  font-size: 24px;
   background: linear-gradient(to bottom, black, white);
   -webkit-background-clip: text;
   background-clip: text;
