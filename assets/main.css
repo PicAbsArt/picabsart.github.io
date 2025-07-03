@@ -529,7 +529,7 @@ section {
 
 .fade-bottom-text {
   position: relative;
-  padding-bottom: 40px; /* Чтобы градиент не закрывал текст */
+  padding-bottom: 40px; /* Высота градиента */
 }
 
 .fade-bottom-text::after {
@@ -539,6 +539,12 @@ section {
   right: 0;
   bottom: 0;
   height: 40px;
-  background: linear-gradient(to bottom, rgba(255, 255, 255, 0), {{ site.background-color | default: '#f9f9f9' }});
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0), #f9f9f9);
   pointer-events: none;
+}
+
+@media (prefers-color-scheme: dark) {
+  .fade-bottom-text::after {
+    background: linear-gradient(to bottom, rgba(16, 16, 16, 0), #1e1e1e);
+  }
 }
