@@ -4,14 +4,16 @@ title: Статьи
 permalink: /articles/
 ---
 
-<h1>Статьи</h1>
+<div class="articles-list">
+  <h1>Статьи</h1>
+  <p class="description">Мои размышления о творчестве, технике и вдохновении</p>
 
-<div class="article-list">
-  {% for article in site.articles %}
-    <div class="article-item">
-      <h2><a href="{{ article.url }}">{{ article.title }}</a></h2>
-      <p class="post-description">{{ article.description }}</p>
-      <p class="post-meta">{{ article.date | date: "%d.%m.%Y" }}</p>
-    </div>
+  {% for post in site.articles %}
+    <article class="article-card">
+      <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+      {% if post.description %}
+        <p>{{ post.description }}</p>
+      {% endif %}
+    </article>
   {% endfor %}
 </div>
