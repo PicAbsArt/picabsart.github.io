@@ -473,23 +473,82 @@ form {
   text-decoration: underline;
 }
 
-/* === Секции на главной === */
+/* === Разделы на главной странице === */
 
 section {
   padding: 2rem 0;
-  scroll-margin-top: 60px;
+  scroll-margin-top: 60px; /* Чтобы меню не закрывало заголовок при скролле */
+  background-color: #ffffff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  margin-bottom: 2rem;
+  border-radius: 10px;
+  overflow: hidden;
 }
 
-.gallery-scroll,
-.articles-scroll {
+.wrapper {
+  max-width: 960px;
+  margin: auto;
+  padding: 0 1rem;
+}
+
+h2 {
+  text-align: center;
+  margin: 0;
+  padding: 1.5rem 0;
+  background-color: #f0f0f0;
+  color: #1e1e1e;
+  font-size: 1.2rem;
+}
+
+.view-more {
+  text-align: center;
+  margin: 1rem 0;
+}
+
+.view-more a {
+  font-weight: 500;
+  transition: opacity 0.3s ease;
+}
+
+.view-more a:hover {
+  opacity: 0.7;
+}
+
+/* === Блок "О себе" с эффектом растворения === */
+
+.fade-bottom-text {
+  position: relative;
+  padding-bottom: 40px;
+}
+
+.fade-bottom-text::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 40px;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0), #f9f9f9);
+  pointer-events: none;
+  z-index: -1;
+}
+
+@media (prefers-color-scheme: dark) {
+  .fade-bottom-text::after {
+    background: linear-gradient(to bottom, rgba(16, 16, 16, 0), #1e1e1e);
+  }
+}
+
+/* === Галерея с горизонтальной прокруткой === */
+
+.gallery-scroll {
   display: flex;
   overflow-x: auto;
   gap: 1rem;
   padding: 1rem;
 }
 
-.thumbnail-card,
-.article-card {
+.thumbnail-card {
   flex: 0 0 200px;
   background: #fff;
   border-radius: 8px;
@@ -498,22 +557,62 @@ section {
   transition: transform 0.3s ease;
 }
 
+.thumbnail-card:hover {
+  transform: scale(1.02);
+}
+
 .thumbnail-card img {
   max-width: 100%;
   border-radius: 8px;
 }
 
-.thumbnail-card:hover,
-.article-card:hover {
-  transform: scale(1.05);
+.thumbnail-card p {
+  margin: 0.5rem 0;
+  font-size: 0.95rem;
+  color: #333;
 }
 
-/* === Иконки контактов === */
+/* === Статьи с горизонтальной прокруткой === */
+
+.articles-scroll {
+  display: flex;
+  overflow-x: auto;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.article-card {
+  flex: 0 0 250px;
+  background: #f4f4f4;
+  padding: 1rem;
+  border-radius: 8px;
+  min-height: 100px;
+  transition: transform 0.3s ease;
+}
+
+.article-card:hover {
+  transform: scale(1.02);
+}
+
+.article-card h3 {
+  margin-top: 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.article-card p {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+/* === Контакты === */
+
 .contact-icons {
   display: flex;
   justify-content: center;
   gap: 1.5rem;
   font-size: 1.5rem;
+  margin: 1rem 0;
 }
 
 .contact-icons a {
@@ -524,14 +623,3 @@ section {
 .contact-icons a:hover {
   color: #005fa3;
 }
-
-/* === Эффект "растворения" для текста "О себе" === */
-
-.gradient-text {
-  font-size: 1rem;
-  background: linear-gradient(to bottom, black, white);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-}
-    
