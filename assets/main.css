@@ -508,33 +508,6 @@ section {
   transform: scale(1.05);
 }
 
-/* === Анимация текста "О себе" === */
-.fade-text {
-  position: relative;
-  height: 40px;
-  overflow: hidden;
-}
-
-.fade-item {
-  position: absolute;
-  opacity: 0;
-  width: 100%;
-  text-align: center;
-  animation: fade 12s linear forwards infinite;
-}
-
-.fade-item:nth-child(1) { animation-delay: 0s; }
-.fade-item:nth-child(2) { animation-delay: 4s; }
-.fade-item:nth-child(3) { animation-delay: 8s; }
-
-@keyframes fade {
-  0% { opacity: 0; }
-  10% { opacity: 1; }
-  30% { opacity: 1; }
-  40% { opacity: 0; }
-  100% { opacity: 0; }
-}
-
 /* === Иконки контактов === */
 .contact-icons {
   display: flex;
