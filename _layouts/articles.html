@@ -8,10 +8,10 @@ permalink: /articles/
 
 <div class="article-list">
   {% for article in site.articles %}
-    <li class="article-item">
+    <div class="article-item">
       <h2><a href="{{ article.url }}">{{ article.title }}</a></h2>
       <p class="post-description">{{ article.description }}</p>
       <p class="post-meta">{{ article.date | date: "%d.%m.%Y" }}</p>
     </div>
   {% endfor %}
-</ul>
+</div>
