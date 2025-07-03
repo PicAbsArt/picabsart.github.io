@@ -1,4 +1,59 @@
 ---
-layout: gallery
-title: Галерея
+layout: default
+title: Главная
+description: Галерея, статьи, о себе и контакты художника Picabs
 ---
+
+<!-- Блок "Галерея" с горизонтальной прокруткой -->
+<section class="partial-gallery" id="gallery">
+  <h2>Галерея</h2>
+  <div class="gallery-scroll">
+    {% for painting in site.paintings limit: 6 %}
+      <a href="{{ painting.url }}" class="thumbnail-card">
+        <img src="{{ painting.images[0] }}" alt="{{ painting.title }}">
+        <p>{{ painting.title }}</p>
+      </a>
+    {% endfor %}
+  </div>
+  <p class="view-more"><a href="/#gallery">Смотреть все картины →</a></p>
+</section>
+
+<!-- Блок "О себе" с анимацией -->
+<section class="about-section" id="about">
+  <h2>Обо мне</h2>
+  <div class="fade-text">
+    <p class="fade-item">Привет! Я Пикабс, художник из Москвы.</p>
+    <p class="fade-item">Пишу картины маслом и акварелью.</p>
+    <p class="fade-item">Вдохновляюсь природой и эмоциями людей.</p>
+  </div>
+  <p class="view-more"><a href="/about/">Читать дальше →</a></p>
+</section>
+
+<!-- Блок "Статьи" с горизонтальной прокруткой -->
+{% assign posts = site.posts limit: 3 %}
+{% if posts.size > 0 %}
+  <section class="partial-articles" id="articles">
+    <h2>Статьи</h2>
+    <div class="articles-scroll">
+      {% for post in posts %}
+        <a href="{{ post.url }}" class="article-card">
+          <h3>{{ post.title }}</h3>
+          <p>{{ post.description | truncatewords: 15 }}</p>
+        </a>
+      {% endfor %}
+    </div>
+    <p class="view-more"><a href="/articles/">Все статьи →</a></p>
+  </section>
+{% endif %}
+
+<!-- Блок "Контакты" -->
+<section class="contact-section" id="contact">
+  <h2>Связь</h2>
+  <p>Напиши мне через:</p>
+  <div class="contact-icons">
+    <a href="mailto:example@example.com" target="_blank">📧</a>
+    <a href="https://t.me/picabs " target="_blank">💬</a>
+    <a href="https://instagram.com/picabs " target="_blank">📷</a>
+  </div>
+  <p class="view-more"><a href="/contact/">Форма связи →</a></p>
+</section>
