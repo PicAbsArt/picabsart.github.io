@@ -27,6 +27,7 @@ description: Галерея, статьи, о себе и контакты ху�
       {% for post in posts %}
         <a href="{{ post.url }}" class="article-card">
           <h3>{{ post.title }}</h3>
+          <img src="{{ post.image }}" alt="{{ post.title }}">
           <p>{{ post.description | truncatewords: 15 }}</p>
         </a>
       {% endfor %}
