@@ -15,6 +15,9 @@ permalink: /articles/
       {% if post.description %}
         <p>{{ post.description }}</p>
       {% endif %}
+      <div class="meta">
+        <small>Опубликовано: {{ post.date | date: "%d %B %Y" }}</small>
+      </div>
     </article>
   {% endfor %}
 </div>
