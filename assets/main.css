@@ -551,3 +551,21 @@ section {
 .contact-icons a:hover {
   color: #005fa3;
 }
+
+/* === Эффект "растворения" для текста "О себе" === */
+
+.fade-bottom-text {
+  position: relative;
+  padding-bottom: 40px; /* Чтобы градиент не закрывал текст */
+}
+
+.fade-bottom-text::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 40px;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0), {{ site.background-color | default: '#f9f9f9' }});
+  pointer-events: none;
+}
