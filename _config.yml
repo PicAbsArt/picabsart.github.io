@@ -10,8 +10,7 @@ logo: "/assets/picabs_logo.png"
 github_username:  picabsart
 
 # Тема
-#theme: minima
-remote_theme: mmistakes/minimal-mistakes  
+theme: minima 
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
