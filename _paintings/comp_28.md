@@ -1,6 +1,6 @@
 ---
 title: Композиция №28
-description: Холст на подрамнике 40х50 см, акрил, глянцевый лак.
+description: Холст на деревянном подрамнике 40х50 см, акрил, глянцевый лак.
 layout: painting
 date: 2024-08-10
 images:
@@ -12,6 +12,7 @@ images:
   - /assets/images/comp_28/6.png
   - /assets/images/comp_28/7.png
   - /assets/images/comp_28/8.png
+  - /assets/images/comp_28/9.png
 marketplace_links:
   - name: "Avito"
     icon: "/assets/icons/avito.svg"
