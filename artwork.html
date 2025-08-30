@@ -472,6 +472,12 @@
     const compId = urlParams.get('id');
     const artwork = artworks.find(a => a.id === compId);
 
+    if (artwork) {
+      document.title = `${artwork.title} — Pictura Abstracta`;
+    } else {
+      document.title = `Картина не найдена — Pictura Abstracta`;
+    }
+
     if (!artwork) {
       document.getElementById('artwork').innerHTML = `
         <h2>Картина не найдена</h2>

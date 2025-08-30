@@ -557,6 +557,12 @@
     const id = urlParams.get('id');
     const article = articles[id];
 
+    if (article) {
+      document.title = `${article.title} — Pictura Abstracta`;
+    } else {
+      document.title = `Статья не найдена — Pictura Abstracta`;
+    }
+
     const container = document.getElementById('article-page');
 
     if (!article) {
