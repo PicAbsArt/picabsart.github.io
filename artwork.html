@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Картина — Pictura Abstracta</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    /* Стили только для artwork.html */
+    .artwork-container {
+      max-width: 1200px;
+      margin: 40px auto 30px;
+      padding: 20px;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    }
+
+    .artwork-header {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .artwork-header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.2rem;
+      color: #1a1a1a;
+      margin-bottom: 8px;
+    }
+
+    .artwork-meta {
+      font-size: 1rem;
+      color: #666;
+      margin-bottom: 20px;
+    }
+
+    .artwork-images {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 16px;
+      margin: 30px 0;
+    }
+
+    .artwork-images img {
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      object-fit: contain;
+      background: #f8f8f8;
+      padding: 10px;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+      cursor: pointer;
+      border: 1px solid #eee;
+    }
+
+    .artwork-description {
+      margin: 30px 0;
+      line-height: 1.8;
+      color: #444;
+      font-size: 1.05rem;
+    }
+
+    .artwork-links {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+      margin: 30px 0;
+      flex-wrap: wrap;
+    }
+
+    .artwork-links a {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 12px 20px;
+      border-radius: 30px;
+      font-size: 0.95rem;
+      text-decoration: none;
+      background: #f8f8f8;
+      color: #333;
+      border: 1px solid #ddd;
+      transition: all 0.3s;
+    }
+
+    .artwork-links img {
+      filter: grayscale(100%);
+      opacity: 0.6;
+    }
+
+
+    .artwork-links a:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    .artwork-links a:hover img {
+      filter: grayscale(0%);
+      opacity: 1.0;
+    }
+
+    /* Нижняя навигация по картинам */
+    .artwork-navigation {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1200px;
+      margin: 60px auto 30px;
+      padding: 0 20px;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    .nav-btn {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1rem;
+      text-decoration: none;
+      color: #555;
+      padding: 12px 20px;
+      border-radius: 8px;
+      transition: all 0.3s ease;
+      text-align: center;
+      min-width: 180px;
+    }
+
+    .nav-btn:hover {
+      color: #000;
+      background: #f5f5f5;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    }
+
+    .nav-btn.gallery-link {
+      background: #f8f8f8;
+      color: #333;
+      border: 1px solid #ddd;
+      min-width: 200px;
+    }
+
+    .nav-buttons {
+      display: flex;
+      gap: 16px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* Футер на странице картины */
+    .footer.artwork-footer {
+      text-align: center;
+      margin: 40px auto 0;
+      padding: 30px 20px;
+      background: #1a1a1a;
+      color: #ccc;
+      border-radius: 12px;
+      max-width: 1200px;
+      font-size: 0.95rem;
+    }
+
+    .footer.artwork-footer p {
+      margin-bottom: 16px;
+      color: #eee;
+      font-size: 1.05rem;
+    }
+
+    .footer.artwork-footer .contacts {
+      display: flex;
+      justify-content: center;
+      gap: 24px;
+      margin-bottom: 20px;
+      flex-wrap: wrap;
+    }
+
+    .footer.artwork-footer .contacts a {
+      color: #aaa;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      transition: color 0.3s;
+    }
+
+    .footer.artwork-footer .contacts a:hover {
+      color: #fff;
+    }
+
+    .footer.artwork-footer .copyright {
+      font-size: 0.85rem;
+      color: #777;
+    }
+
+    /* Адаптив */
+    @media (max-width: 768px) {
+      .artwork-navigation {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+
+      .nav-buttons {
+        flex-direction: column;
+        width: 100%;
+        max-width: 300px;
+      }
+
+      .nav-btn {
+        width: 100%;
+      }
+
+      .gallery-link {
+        order: -1;
+        margin-bottom: 10px;
+      }
+
+      .footer.artwork-footer .contacts {
+        flex-direction: column;
+        gap: 12px;
+      }
+    }
+
+    /* Лайтбокс — светлый фон */
+    .lightbox {
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(245, 245, 245, 0.95);
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      backdrop-filter: blur(4px);
+    }
+
+    /* Контейнер для фото и навигации */
+    .lightbox-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      max-width: 90vw;
+      max-height: 90vh;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      padding: 10px;
+    }
+
+    .lightbox-content img {
+      max-width: 100%;
+      max-height: calc(80vh - 80px);
+      object-fit: contain;
+      border-radius: 8px;
+      background: #fff;
+    }
+
+    /* Навигация всегда внизу */
+    .lightbox-nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      max-width: 500px;
+      margin-top: 12px;
+      color: #333;
+      font-size: 1.1rem;
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    .lightbox-nav button {
+      background: #f0f0f0;
+      border: 1px solid #ddd;
+      color: #333;
+      width: 50px;
+      height: 50px;
+      border-radius: 8px;
+      font-size: 1.5rem;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .lightbox-nav button:hover {
+      background: #000;
+      color: #fff;
+      border-color: #000;
+    }
+
+    .lightbox-close {
+      position: absolute;
+      top: -50px;
+      right: 0;
+      color: #333;
+      font-size: 30px;
+      font-weight: bold;
+      cursor: pointer;
+      background: #f0f0f0;
+      width: 40px;
+      height: 40px;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid #ddd;
+      transition: all 0.3s ease;
+    }
+
+    .lightbox-close:hover {
+      background: #000;
+      color: #fff;
+      border-color: #000;
+    }
+
+    .lightbox-counter {
+      color: #555;
+      font-size: 1rem;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="artwork-container" id="artwork">
+    <!-- Контент будет загружен через JS -->
+  </div>
+
+  <!-- Нижняя навигация -->
+  <div class="artwork-navigation">
+    <a href="index.html" class="nav-btn gallery-link">
+      ← Вернуться в галерею
+    </a>
+    <div class="nav-buttons">
+      <a href="#" id="prev-art" class="nav-btn prev">
+        ← Предыдущая картина
+      </a>
+      <a href="#" id="next-art" class="nav-btn next">
+        Следующая картина →
+      </a>
+    </div>
+  </div>
+
+  <!-- Футер -->
+  <footer class="footer artwork-footer">
+    <p>Свяжитесь для сотрудничества или заказа:</p>
+    <div class="contacts">
+      <a href="mailto:picabsart@gmail.com"><i class="fas fa-envelope"></i>picabsart@gmail.com</a>
+      <a href="https://t.me/picabsart" target="_blank"><i class="fab fa-telegram"></i>Telegram</a>
+      <a href="https://ru.pinterest.com/marinabaliq/" target="_blank"><i class="fab fa-pinterest"></i>Pinterest</a>
+    </div>
+    <div class="copyright">
+      &copy; 2025 Pictura Abstracta. Все права защищены.
+    </div>
+  </footer>
+
+  <!-- Модальное окно (лайтбокс) -->
+  <div class="lightbox" id="lightbox">
+    <span class="lightbox-close" id="lightbox-close">&times;</span>
+    <div class="lightbox-content">
+      <img id="lightbox-img" src="" alt="Увеличенное фото">
+      <div class="lightbox-nav">
+        <button id="lightbox-prev">←</button>
+        <span id="lightbox-counter">1 / 9</span>
+        <button id="lightbox-next">→</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const artworks = [
+      {
+        id: "comp_42",
+        title: "Тени памяти",
+        year: 2024,
+        size: "25 х 35 см",
+        technique: "Холст на картоне, акрил, глянцевый лак, пластиковая рама (в двух частях)",
+        description: "Двойная композиция из двух холстов на картоне (25×35 см каждый), выполненная акриловыми красками и покрытая глянцевым лаком, представляет собой тонкое исследование природы памяти и времени. На поверхности — абстрактные, почти растительные формы, напоминающие высохшие стебли или переплетённые листья, вырезанные из светлого дерева. Их мягкие, бежевые тона и тонкая текстура создают ощущение увядания и ностальгии.<br><br>Каждый элемент картины словно отражает фрагмент воспоминания — нечёткий, но глубоко трогательный. Глянцевый лак подчёркивает игру света и тени, придавая изображению почти живое дыхание. Пластиковая рама с эффектом состаренной древесины добавляет современный контраст, объединяя прошлое и настоящее.<br><br>«Тени памяти» — это не просто визуальный образ, а медитация о том, как природа и время сохраняют следы жизни, даже когда она исчезает. Это работа для тех, кто умеет видеть красоту в уходящем.",
+        ozon: "",
+        avito: ""
+      },
+      {
+        id: "comp_5",
+        title: "Диалог форм",
+        year: 2024,
+        size: "20 × 30 см",
+        technique: "Холст на деревянном подрамнике, акрил, глянцевый лак (в двух частях)",
+        description: "«Диалог форм» — это двойная абстрактная композиция, выполненная акриловыми красками на холсте, натянутом на деревянный подрамник (20×30 см каждая часть). Работа состоит из двух симметричных, но не идентичных панелей, объединённых в единую визуальную историю. Геометрические фигуры — квадраты, прямоугольники и круги — в чёрно-белой гамме с акцентами тёплого охристого жёлтого создают динамичное пространство, где форма и цвет вступают в диалог.<br><br>Текстура холста подчёркнута слоистостью краски и глянцевым лаком, придающим поверхности глубину и блеск. Каждая панель отражает принципы модернистской абстракции: баланс, контраст и гармония между порядком и свободой. Схожие элементы в разных конфигурациях символизируют взаимодействие, повторение и изменение — как в природе, так и в человеческой коммуникации.<br><br>Эта работа приглашает зрителя увидеть в простых формах сложность отношений, а в симметрии — скрытое напряжение и движение. «Диалог форм» — это не только визуальный опыт, но и философское размышление о структуре мира через язык геометрии и цвета.",
+        ozon: "",
+        avito: ""
+      },
+      {
+        id: "comp_37",
+        title: "Диалог теней",
+        year: 2024,
+        size: "20 × 30 см",
+        technique: "Холст на деревянном подрамнике, акрил, матовый лак (в двух частях).",
+        description: "«Диалог теней» — это двухчастная абстрактная композиция, созданная на холсте, натянутом на деревянный подрамник (20х30 см), с использованием акриловых красок и матового лака. Картина представляет собой визуальное взаимодействие двух полотен, разделённых тонкой зелёной рамкой, которая выступает как символический разрыв и одновременно связующий элемент.<br><br>Цветовая палитра основана на мягких оттенках серого, бежевого, слоновой кости и приглушённого золота — цветах, напоминающих старинную штукатурку, древесину или пыльные страницы старых книг. Текстура поверхности богата: широкие мазки, скребки, прозрачные слои и следы инструментов создают ощущение времени, прошедшего через материал. В центре левой части можно угадать форму округлого объекта — словно фрагмент сферы или камня, погружённого в память.<br><br>Каждая часть картины — самостоятельна, но вместе они образуют диалог: одно полотно «говорит» о форме и структуре, другое — о движении и пространстве. Это не просто абстракция, а медитация о границах восприятия, о том, как мы видим и интерпретируем реальность. Матовый лак придаёт работе глубину и сдержанность, подчёркивая её эфемерность и внутреннюю тишину.<br><br>«Диалог теней» приглашает зрителя войти в пространство между формой и смыслом, между материальным и духовным — где каждая трещина и мазок — это след размышления.",
+        ozon: "",
+        avito: ""
+      },
+      {
+        id: "comp_9",
+        title: "Тени и свет",
+        year: 2024,
+        size: "30 × 40 см",
+        technique: "Холст на картоне, акрил, глянцевый лак, деревянная рама",
+        description: "Абстрактная композиция на холсте, выполненная акриловыми красками и покрытая глянцевым лаком, создает ощущение динамики и глубины. В центре внимания — игра контрастов: чёрные и серые вертикальные полосы переплетаются с мягкими оттенками белого и нежного золота, словно отражения света на воде или тени в утреннем лесу. Текстура поверхности подчеркнута широкими мазками и тонкими штрихами, придающими картине рельефность и эмоциональную напряжённость. Золотистые акценты добавляют благородства и тепла, создавая ощущение надежды и гармонии в пространстве.<br><br>Картина в деревянной раме чёрного цвета идеально вписывается в современный интерьер, становясь не просто украшением стены, а точкой медитации — приглашением к размышлению о границах между светом и тенью, движением и покойом, прошлым и будущим.",
+        ozon: "",
+        avito: ""
+      },
+      {
+        id: "comp_22",
+        title: "Отражение времени",
+        year: 2024,
+        size: "30 × 40 см",
+        technique: "Холст на картоне, акрил, глянцевый лак, деревянная рама",
+        description: "Абстрактная композиция на холсте, выполненная акриловыми красками и покрытая глянцевым лаком, создает ощущение глубины и динамики. Картина размером 30х40 см в деревянной раме сочетает в себе спокойные нейтральные тона — серый, бежевый, белый — с выразительными акцентами насыщенного изумрудно-синего цвета. Вертикальные и горизонтальные мазки, как будто отпечатки памяти, переплетаются, образуя нечто среднее между городским пейзажем и отражением в воде. Глянец придаёт поверхности живое свечение, словно свет играет на влажной глади.<br><br>«Отражение времени» — это медитация о прошлом, настоящем и будущем, где формы не определяются, а лишь намечаются, как воспоминания или предчувствия. Картина идеально впишется в современный интерьер, добавляя ему утончённости и философской глубины.",
+        ozon: "",
+        avito: ""
+      },
+      {
+        id: "comp_14",
+        title: "Горизонт отражений",
+        year: 2023,
+        size: "30 × 40 см",
+        technique: "Холст на картоне, акрил, глянцевый лак, деревянная рама",
+        description: "Абстрактная композиция на холсте, выполненная акриловыми красками и покрытая глянцевым лаком, создаёт ощущение динамичного пространства, где границы между реальностью и отражением стираются. Геометрические формы, пересекающиеся линии и текстурированные пятна в сдержанной палитре серого, синего, белого и чёрного напоминают городской пейзаж, отражённый в воде — будто фрагменты архитектуры растворяются в поверхности воды под утренним светом.<br><br>Картина, оформленная в элегантной деревянной раме, сочетает строгость форм с мягкостью цветовых переходов. Глянцевое покрытие придаёт поверхности глубину и блеск, усиливая эффект отражения и игру света.<br><br>«Горизонт отражений» — это не просто абстракция, а приглашение к медитации о времени, пространстве и восприятии. Она идеально впишется в современный интерьер, становясь центральным элементом в гостиной, кабинете или спальне, добавляя атмосфере гармонии и умиротворения.",
+        ozon: "",
+        avito: ""
+      },
+      {
+        id: "comp_35",
+        title: "Золотые отражения",
+        year: 2024,
+        size: "40 × 50 см",
+        technique: "Холст на деревянном подрамнике, акрил, глянцевый лак",
+        description: "Абстрактная композиция, написанная акриловыми красками на холсте, закреплённом на деревянном подрамнике (40×50 см), передаёт атмосферу тихого вечера над водой. Верхняя часть полотна — мягкий серо-голубой фон, напоминающий дымку или небо в сумерках. По центру и нижней части разливаются вертикальные и горизонтальные мазки насыщенного золотисто-жёлтого цвета, словно светящиеся силуэты городских зданий или деревьев, озарённых закатным солнцем.<br><br>Нижняя треть картины погружена в глубокий синий, почти чёрный оттенок, где золотые пятна отражаются, будто в спокойной глади воды. Эффект глянцевого лака усиливает игру света, придавая поверхности живое, почти мерцающее качество. Текстура холста и слоистость красок создают ощущение движения и глубины, будто зритель стоит у кромки воды и наблюдает за тонким балансом света и тени.<br><br>«Золотые отражения» — это не просто изображение, а эмоциональное состояние: гармония между теплом и холодом, реальностью и её отражением, движением и покое. Картина приглашает задуматься о моменте, когда день переходит в ночь, а мир становится тихим и сказочным.",
+        ozon: "https://ozon.ru/t/dhj4uTb",
+        avito: ""
+      },
+      {
+        id: "comp_28",
+        title: "Горизонты льда",
+        year: 2023,
+        size: "40 × 50 см",
+        technique: "Холст на деревянном подрамнике, акрил, глянцевый лак",
+        description: "Абстрактная композиция на холсте, нанесённом на деревянный подрамник (40х50 см), выполнена в технике акрила с использованием глянцевого лака. Картина представляет собой динамичное пространство, где холодные оттенки синего и серого переплетаются с текстурой, напоминающей трещины ледяной коры или древние скальные породы. Геометрические формы — острые треугольники, словно выступающие из глубины, — создают ощущение движения и напряжения, будто ледяные кристаллы пронзают мрачную поверхность.<br><br>Текстура холста, усиленная вертикальными полосами и пятнами, придаёт произведению эффект старинного камня или замёрзшего водопада. Глянцевый лак подчёркивает блеск синих элементов, придавая им почти металлический отлив, как будто они отражают свет в бездне.<br><br>«Горизонты льда» — это не просто картина, а визуальное путешествие в холодное, загадочное пространство между реальностью и фантазией, где каждый треугольник — след времени, памяти или скрытой энергии, пробивающейся сквозь тьму.",
+        ozon: "",
+        avito: ""
+      }
+    ];
+
+    const urlParams = new URLSearchParams(window.location.search);
+    const compId = urlParams.get('id');
+    const artwork = artworks.find(a => a.id === compId);
+
+    if (!artwork) {
+      document.getElementById('artwork').innerHTML = `
+        <h2>Картина не найдена</h2>
+        <p>Вернитесь в <a href="index.html">галерею</a>.</p>
+      `;
+    } else {
+      let imagesHTML = '';
+      for (let i = 1; i <= 9; i++) {
+        imagesHTML += `<img src="gallery/${artwork.id}/${i}.png" alt="${artwork.title} - вид ${i}" data-index="${i}">`;
+      }
+
+      document.getElementById('artwork').innerHTML = `
+        <div class="artwork-header">
+          <h1>${artwork.title}</h1>
+          <div class="artwork-meta">
+            ${artwork.year} &nbsp;|&nbsp; ${artwork.size} &nbsp;|&nbsp; ${artwork.technique}
+          </div>
+        </div>
+
+        <div class="artwork-images" id="images-grid">
+          ${imagesHTML}
+        </div>
+
+        <div class="artwork-description">
+          <p>${artwork.description}</p>
+        </div>
+        
+        <div class="artwork-links">
+          ${artwork.ozon ? `
+            <a href="${artwork.ozon}" target="_blank" class="artwork-link-img" onclick="event.stopPropagation()">
+              <img src="icons/ozon-icon.png" alt="Смотреть на Ozon" class="market-icon">
+              <span>Смотреть на Ozon</span>
+            </a>
+          ` : ''}
+          ${artwork.avito ? `
+            <a href="${artwork.avito}" target="_blank" class="artwork-link-img" onclick="event.stopPropagation()">
+              <img src="icons/avito-icon.png" alt="Смотреть на Avito" class="market-icon">
+              <span>Смотреть на Avito</span>
+            </a>
+          ` : ''}
+        </div>
+
+      `;
+    }
+
+    // === Навигация: предыдущая / следующая картина ===
+    if (artwork) {
+      const artworkIds = artworks.map(a => a.id);
+      const currentIndex = artworkIds.indexOf(compId);
+      const prevArt = artworks[(currentIndex - 1 + artworkIds.length) % artworkIds.length];
+      const nextArt = artworks[(currentIndex + 1) % artworkIds.length];
+
+      document.getElementById('prev-art').href = `artwork.html?id=${prevArt.id}`;
+      document.getElementById('next-art').href = `artwork.html?id=${nextArt.id}`;
+
+      document.getElementById('prev-art').textContent = `← ${prevArt.title}`;
+      document.getElementById('next-art').textContent = `${nextArt.title} →`;
+    }
+
+    // === Лайтбокс (просмотр фото) ===
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+    const lightboxCounter = document.getElementById('lightbox-counter');
+    const lightboxPrev = document.getElementById('lightbox-prev');
+    const lightboxNext = document.getElementById('lightbox-next');
+    const lightboxClose = document.getElementById('lightbox-close');
+
+    let currentImages = [];
+    let currentIndex = 0;
+
+    document.addEventListener('DOMContentLoaded', () => {
+      const imageElements = document.querySelectorAll('#images-grid img');
+      
+      imageElements.forEach(img => {
+        img.addEventListener('click', () => {
+          currentImages = Array.from(imageElements).map(i => i.src);
+          currentIndex = currentImages.indexOf(img.src);
+          updateLightbox();
+          lightbox.style.display = 'flex';
+        });
+      });
+    });
+
+    function updateLightbox() {
+      if (currentImages.length === 0 || currentIndex < 0) return;
+      lightboxImg.src = currentImages[currentIndex];
+      lightboxCounter.textContent = `${currentIndex + 1} / ${currentImages.length}`;
+    }
+
+    lightboxPrev.addEventListener('click', (e) => {
+      e.stopPropagation();
+      currentIndex = (currentIndex - 1 + currentImages.length) % currentImages.length;
+      updateLightbox();
+    });
+
+    lightboxNext.addEventListener('click', (e) => {
+      e.stopPropagation();
+      currentIndex = (currentIndex + 1) % currentImages.length;
+      updateLightbox();
+    });
+
+    lightboxClose.addEventListener('click', () => {
+      lightbox.style.display = 'none';
+    });
+
+    window.addEventListener('click', (e) => {
+      if (e.target === lightbox) {
+        lightbox.style.display = 'none';
+      }
+    });
+  </script>
+
+</body>
+</html>
