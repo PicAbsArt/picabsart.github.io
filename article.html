@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Статья — Pictura Abstracta">
   <title>Статья — Pictura Abstracta</title>
   <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
@@ -56,6 +57,7 @@
       1: {
         title: "Интерьерная живопись: преимущества абстракции и выбор материалов",
         preview: "Почему абстрактная интерьерная живопись — идеальный выбор для вашего дома. Преимущества, материалы и цветовая палитра.",
+        descriptionSEO: "Почему абстракция идеальна для интерьера? Узнайте о преимуществах абстрактной живописи, выборе цветовой гаммы и материалов — акрил, масло, спреи и другие.",
         image: "article-preview/1.png",
         date: "14 мая 2025",
         content: `
@@ -139,6 +141,7 @@
       2: {
         title: "Акриловые краски в интерьерной живописи: преимущества, экологичность и уход",
         preview: "Почему акриловые краски — лучший выбор для интерьерной живописи. Экологичность, долговечность, простота ухода и защита лаком.",
+        descriptionSEO: "Почему акрил — лучший выбор для интерьерной живописи? Преимущества, экологичность, лакирование и простой уход за картинами на акриловой основе.",
         image: "article-preview/2.png",
         date: "5 июня 2025",
         content: `
@@ -244,6 +247,7 @@
       3: {
         title: "Как подобрать картину к интерьеру: стиль, цвет, расположение",
         preview: "Практическое руководство по выбору картины для интерьера. Как сочетать стиль, цвета, размеры и личные предпочтения.",
+        descriptionSEO: "Как выбрать картину под интерьер: сочетание стиля, цвета, размера и расположения. Практические советы по гармоничному включению искусства в дизайн пространства.",
         image: "article-preview/3.png",
         date: "19 июня 2025",
         content: `
@@ -325,6 +329,7 @@
       4: {
         title: "Сравнение ручной живописи и печатных репродукций: от технологии до ценности искусства",
         preview: "В мире искусства существует принципиальная разница между ручной живописью и печатными репродукциями. Эта подробная статья исследует 12 ключевых аспектов — от исторического развития и технологических процессов до визуальных характеристик, стоимости и коллекционной ценности.",
+        descriptionSEO: "Ручная живопись vs печать: сравнение техники, материалов, стоимости и ценности. Узнайте, чем оригинал отличается от репродукции и как сделать осознанный выбор.",
         image: "article-preview/4.png",
         date: "24 июля 2025",
         content: `
@@ -560,6 +565,12 @@
     const urlParams = new URLSearchParams(window.location.search);
     const id = urlParams.get('id');
     const article = articles[id];
+
+    if (article && article.descriptionSEO) {
+      document.querySelector('meta[name="description"]').setAttribute('content', article.descriptionSEO);
+    } else {
+      document.querySelector('meta[name="description"]').setAttribute('content', 'Статья не найдена — Pictura Abstracta');
+    }
 
     if (article) {
       document.title = `${article.title} — Pictura Abstracta`;
