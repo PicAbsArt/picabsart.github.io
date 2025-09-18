@@ -1,0 +1,513 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+
+  <url>
+    <loc>https://picabs.ru/</loc>
+    <lastmod>2025-09-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <url>
+    <loc>https://picabs.ru/articles.html</loc>
+    <lastmod>2025-09-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://picabs.ru/about.html</loc>
+    <lastmod>2025-09-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://picabs.ru/gallery/liniya-i-prostranstvo.html</loc>
+    <lastmod>2025-09-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://picabs.ru/gallery/comp_45/1.png</image:loc>
+      <image:caption>Линия и пространство — Общий вид</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://picabs.ru/gallery/comp_45/2.png</image:loc>
+      <image:caption>Линия и пространство — Общий вид (под углом 1)</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://picabs.ru/gallery/comp_45/3.png</image:loc>
+      <image:caption>Линия и пространство — Общий вид (под углом 2)</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://picabs.ru/gallery/comp_45/4.png</image:loc>
+      <image:caption>Линия и пространство — Фрагмент 1</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://picabs.ru/gallery/comp_45/5.png</image:loc>
+      <image:caption>Линия и пространство — Фрагмент 2</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://picabs.ru/gallery/comp_45/6.png</image:loc>
+      <image:caption>Линия и пространство — Фрагмент 3</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://picabs.ru/gallery/comp_45/7.png</image:loc>
+      <image:caption>Линия и пространство — В интерьере 1</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://picabs.ru/gallery/comp_45/8.png</image:loc>
+      <image:caption>Линия и пространство — В интерьере 2</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://picabs.ru/gallery/comp_45/9.png</image:loc>
+      <image:caption>Линия и пространство — Вид сзади</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://picabs.ru/gallery/zerkalo-prirody.html</loc>
+    <lastmod>2025-09-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://picabs.ru/gallery/comp_31/1.png</image:loc>
+      <image:caption>Зеркало природы — Общий вид</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://picabs.ru/gallery/comp_31/2.png</image:loc>
+      <image:caption>Зеркало природы — Общий вид (под углом 1)</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://picabs.ru/gallery/comp_31/3.png</image:loc>
+      <image:caption>Зеркало природы — Общий вид (под углом 2)</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://picabs.ru/gallery/comp_31/4.png</image:loc>
+      <image:caption>Зеркало природы — Фрагмент 1</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://picabs.ru/gallery/comp_31/5.png</image:loc>
+      <image:caption>Зеркало природы — Фрагмент 2</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://picabs.ru/gallery/comp_31/6.png</image:loc>
+      <image:caption>Зеркало природы — Фрагмент 3</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://picabs.ru/gallery/comp_31/7.png</image:loc>
+      <image:caption>Зеркало природы — В интерьере 1</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://picabs.ru/gallery/comp_31/8.png</image:loc>
+      <image:caption>Зеркало природы — В интерьере 2</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://picabs.ru/gallery/comp_31/9.png</image:loc>
+      <image:caption>Зеркало природы — Вид сзади</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://picabs.ru/gallery/tishina-na-kraju.html</loc>
+    <lastmod>2025-09-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://picabs.ru/gallery/comp_18/1.png</image:loc>
+      <image:caption>Тишина на краю — Общий вид</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://picabs.ru/gallery/comp_18/2.png</image:loc>
+      <image:caption>Тишина на краю — Общий вид (под углом 1)</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://picabs.ru/gallery/comp_18/3.png</image:loc>
+      <image:caption>Тишина на краю — Общий вид (под углом 2)</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://picabs.ru/gallery/comp_18/4.png</image:loc>
+      <image:caption>Тишина на краю — Фрагмент 1</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://picabs.ru/gallery/comp_18/5.png</image:loc>
+      <image:caption>Тишина на краю — Фрагмент 2</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://picabs.ru/gallery/comp_18/6.png</image:loc>
+      <image:caption>Тишина на краю — Фрагмент 3</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://picabs.ru/gallery/comp_18/7.png</image:loc>
+      <image:caption>Тишина на краю — В интерьере 1</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://picabs.ru/gallery/comp_18/8.png</image:loc>
+      <image:caption>Тишина на краю — В интерьере 2</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://picabs.ru/gallery/comp_18/9.png</image:loc>
+      <image:caption>Тишина на краю — Вид сзади</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://picabs.ru/gallery/tini-pamyati.html</loc>
+    <lastmod>2025-09-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://picabs.ru/gallery/comp_42/1.png</image:loc>
+      <image:caption>Тени памяти — Общий вид</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://picabs.ru/gallery/comp_42/2.png</image:loc>
+      <image:caption>Тени памяти — Общий вид (под углом 1)</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://picabs.ru/gallery/comp_42/3.png</image:loc>
+      <image:caption>Тени памяти — Общий вид (под углом 2)</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://picabs.ru/gallery/comp_42/4.png</image:loc>
+      <image:caption>Тени памяти — Фрагмент 1</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://picabs.ru/gallery/comp_42/5.png</image:loc>
+      <image:caption>Тени памяти — Фрагмент 2</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://picabs.ru/gallery/comp_42/6.png</image:loc>
+      <image:caption>Тени памяти — Фрагмент 3</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://picabs.ru/gallery/comp_42/7.png</image:loc>
+      <image:caption>Тени памяти — В интерьере 1</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://picabs.ru/gallery/comp_42/8.png</image:loc>
+      <image:caption>Тени памяти — В интерьере 2</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://picabs.ru/gallery/comp_42/9.png</image:loc>
+      <image:caption>Тени памяти — Вид сзади</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://picabs.ru/gallery/dialog-form.html</loc>
+    <lastmod>2025-09-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://picabs.ru/gallery/comp_5/1.png</image:loc>
+      <image:caption>Диалог форм — Общий вид</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://picabs.ru/gallery/comp_5/2.png</image:loc>
+      <image:caption>Диалог форм — Общий вид (под углом 1)</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://picabs.ru/gallery/comp_5/3.png</image:loc>
+      <image:caption>Диалог форм — Общий вид (под углом 2)</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://picabs.ru/gallery/comp_5/4.png</image:loc>
+      <image:caption>Диалог форм — Фрагмент 1</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://picabs.ru/gallery/comp_5/5.png</image:loc>
+      <image:caption>Диалог форм — Фрагмент 2</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://picabs.ru/gallery/comp_5/6.png</image:loc>
+      <image:caption>Диалог форм — Фрагмент 3</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://picabs.ru/gallery/comp_5/7.png</image:loc>
+      <image:caption>Диалог форм — В интерьере 1</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://picabs.ru/gallery/comp_5/8.png</image:loc>
+      <image:caption>Диалог форм — В интерьере 2</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://picabs.ru/gallery/comp_5/9.png</image:loc>
+      <image:caption>Диалог форм — Вид сзади</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://picabs.ru/gallery/dialog-teni.html</loc>
+    <lastmod>2025-09-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://picabs.ru/gallery/comp_37/1.png</image:loc>
+      <image:caption>Диалог теней — Общий вид</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://picabs.ru/gallery/comp_37/2.png</image:loc>
+      <image:caption>Диалог теней — Общий вид (под углом 1)</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://picabs.ru/gallery/comp_37/3.png</image:loc>
+      <image:caption>Диалог теней — Общий вид (под углом 2)</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://picabs.ru/gallery/comp_37/4.png</image:loc>
+      <image:caption>Диалог теней — Фрагмент 1</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://picabs.ru/gallery/comp_37/5.png</image:loc>
+      <image:caption>Диалог теней — Фрагмент 2</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://picabs.ru/gallery/comp_37/6.png</image:loc>
+      <image:caption>Диалог теней — Фрагмент 3</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://picabs.ru/gallery/comp_37/7.png</image:loc>
+      <image:caption>Диалог теней — В интерьере 1</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://picabs.ru/gallery/comp_37/8.png</image:loc>
+      <image:caption>Диалог теней — В интерьере 2</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://picabs.ru/gallery/comp_37/9.png</image:loc>
+      <image:caption>Диалог теней — Вид сзади</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://picabs.ru/gallery/teni-i-svet.html</loc>
+    <lastmod>2025-09-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://picabs.ru/gallery/comp_9/1.png</image:loc>
+      <image:caption>Тени и свет — Общий вид</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://picabs.ru/gallery/comp_9/2.png</image:loc>
+      <image:caption>Тени и свет — Общий вид (под углом 1)</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://picabs.ru/gallery/comp_9/3.png</image:loc>
+      <image:caption>Тени и свет — Общий вид (под углом 2)</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://picabs.ru/gallery/comp_9/4.png</image:loc>
+      <image:caption>Тени и свет — Фрагмент 1</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://picabs.ru/gallery/comp_9/5.png</image:loc>
+      <image:caption>Тени и свет — Фрагмент 2</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://picabs.ru/gallery/comp_9/6.png</image:loc>
+      <image:caption>Тени и свет — Фрагмент 3</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://picabs.ru/gallery/comp_9/7.png</image:loc>
+      <image:caption>Тени и свет — В интерьере 1</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://picabs.ru/gallery/comp_9/8.png</image:loc>
+      <image:caption>Тени и свет — В интерьере 2</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://picabs.ru/gallery/comp_9/9.png</image:loc>
+      <image:caption>Тени и свет — Вид сзади</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://picabs.ru/gallery/otrazhenie-vremeni.html</loc>
+    <lastmod>2025-09-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://picabs.ru/gallery/comp_22/1.png</image:loc>
+      <image:caption>Отражение времени — Общий вид</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://picabs.ru/gallery/comp_22/2.png</image:loc>
+      <image:caption>Отражение времени — Общий вид (под углом 1)</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://picabs.ru/gallery/comp_22/3.png</image:loc>
+      <image:caption>Отражение времени — Общий вид (под углом 2)</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://picabs.ru/gallery/comp_22/4.png</image:loc>
+      <image:caption>Отражение времени — Фрагмент 1</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://picabs.ru/gallery/comp_22/5.png</image:loc>
+      <image:caption>Отражение времени — Фрагмент 2</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://picabs.ru/gallery/comp_22/6.png</image:loc>
+      <image:caption>Отражение времени — Фрагмент 3</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://picabs.ru/gallery/comp_22/7.png</image:loc>
+      <image:caption>Отражение времени — В интерьере 1</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://picabs.ru/gallery/comp_22/8.png</image:loc>
+      <image:caption>Отражение времени — В интерьере 2</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://picabs.ru/gallery/comp_22/9.png</image:loc>
+      <image:caption>Отражение времени — Вид сзади</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://picabs.ru/gallery/gorizontal-otrazhenij.html</loc>
+    <lastmod>2025-09-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://picabs.ru/gallery/comp_14/1.png</image:loc>
+      <image:caption>Горизонт отражений — Общий вид</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://picabs.ru/gallery/comp_14/2.png</image:loc>
+      <image:caption>Горизонт отражений — Общий вид (под углом 1)</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://picabs.ru/gallery/comp_14/3.png</image:loc>
+      <image:caption>Горизонт отражений — Общий вид (под углом 2)</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://picabs.ru/gallery/comp_14/4.png</image:loc>
+      <image:caption>Горизонт отражений — Фрагмент 1</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://picabs.ru/gallery/comp_14/5.png</image:loc>
+      <image:caption>Горизонт отражений — Фрагмент 2</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://picabs.ru/gallery/comp_14/6.png</image:loc>
+      <image:caption>Горизонт отражений — Фрагмент 3</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://picabs.ru/gallery/comp_14/7.png</image:loc>
+      <image:caption>Горизонт отражений — В интерьере 1</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://picabs.ru/gallery/comp_14/8.png</image:loc>
+      <image:caption>Горизонт отражений — В интерьере 2</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://picabs.ru/gallery/comp_14/9.png</image:loc>
+      <image:caption>Горизонт отражений — Вид сзади</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://picabs.ru/gallery/zolotye-otrazheniya.html</loc>
+    <lastmod>2025-09-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://picabs.ru/gallery/comp_35/1.png</image:loc>
+      <image:caption>Золотые отражения — Общий вид</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://picabs.ru/gallery/comp_35/2.png</image:loc>
+      <image:caption>Золотые отражения — Общий вид (под углом 1)</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://picabs.ru/gallery/comp_35/3.png</image:loc>
+      <image:caption>Золотые отражения — Общий вид (под углом 2)</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://picabs.ru/gallery/comp_35/4.png</image:loc>
+      <image:caption>Золотые отражения — Фрагмент 1</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://picabs.ru/gallery/comp_35/5.png</image:loc>
+      <image:caption>Золотые отражения — Фрагмент 2</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://picabs.ru/gallery/comp_35/6.png</image:loc>
+      <image:caption>Золотые отражения — Фрагмент 3</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://picabs.ru/gallery/comp_35/7.png</image:loc>
+      <image:caption>Золотые отражения — В интерьере 1</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://picabs.ru/gallery/comp_35/8.png</image:loc>
+      <image:caption>Золотые отражения — В интерьере 2</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://picabs.ru/gallery/comp_35/9.png</image:loc>
+      <image:caption>Золотые отражения — Вид сзади</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://picabs.ru/gallery/gorizonty-lda.html</loc>
+    <lastmod>2025-09-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://picabs.ru/gallery/comp_28/1.png</image:loc>
+      <image:caption>Горизонты льда — Общий вид</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://picabs.ru/gallery/comp_28/2.png</image:loc>
+      <image:caption>Горизонты льда — Общий вид (под углом 1)</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://picabs.ru/gallery/comp_28/3.png</image:loc>
+      <image:caption>Горизонты льда — Общий вид (под углом 2)</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://picabs.ru/gallery/comp_28/4.png</image:loc>
+      <image:caption>Горизонты льда — Фрагмент 1</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://picabs.ru/gallery/comp_28/5.png</image:loc>
+      <image:caption>Горизонты льда — Фрагмент 2</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://picabs.ru/gallery/comp_28/6.png</image:loc>
+      <image:caption>Горизонты льда — Фрагмент 3</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://picabs.ru/gallery/comp_28/7.png</image:loc>
+      <image:caption>Горизонты льда — В интерьере 1</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://picabs.ru/gallery/comp_28/8.png</image:loc>
+      <image:caption>Горизонты льда — В интерьере 2</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://picabs.ru/gallery/comp_28/9.png</image:loc>
+      <image:caption>Горизонты льда — Вид сзади</image:caption>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://picabs.ru/articles/interernaya-zhivopis-abstrakciya-materialy.html</loc>
+    <lastmod>2025-09-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://picabs.ru/articles/akriolovye-kraski-preimushhestva-uhod.html</loc>
+    <lastmod>2025-09-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://picabs.ru/articles/kak-podobrat-kartinu-k-intereru.html</loc>
+    <lastmod>2025-09-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://picabs.ru/articles/abstrakciya-ili-pechat-original-ili-reprodukcija.html</loc>
+    <lastmod>2025-09-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+</urlset>
