@@ -42,18 +42,58 @@
   <link rel="stylesheet" href="/style.css" />
 </head>
 <body>
-  <header>
-    <h1>Pictura Abstracta</h1>
-    <p>абстрактная интерьерная живопись Марины Балик</p>
-    <nav class="main-nav">
-      <a href="/index.html" class="nav-link">Галерея</a>
-      <a href="/articles.html" class="nav-link">Статьи</a>
-      <a href="/about.html" class="nav-link">Обо мне</a>
-    </nav>
+  <header class="header">
+    <div class="header-left">
+      <a href="/index.html" class="logo-link">
+        <img src="/icons/logo.png" alt="Pictura Abstracta" class="logo-img">
+      </a>
+    </div>
+    <h1 class="header-title">Горизонты льда</h1>
+    <div class="header-right">
+      <button class="burger-img-btn" aria-label="Меню"></button>
+    </div>
   </header>
+  <nav class="sidebar-menu">
+    <div class="sidebar-header">
+      <h3>Pictura Abstracta</h3>
+      <button class="close-btn">&times;</button>
+    </div>
+    <ul class="menu-tree">
+      <li class="menu-item has-submenu">
+        <img src="/icons/more.png" alt="" class="toggle-icon">
+        <a href="/index.html" class="menu-link">Галерея</a>
+      </li>
+      <ul class="submenu">
+        <li><a href="/gallery/liniya-i-prostranstvo.html">Линия и пространство</a></li>
+        <li><a href="/gallery/zerkalo-prirody.html">Зеркало природы</a></li>
+        <li><a href="/gallery/tishina-na-kraju.html">Тишина на краю</a></li>
+        <li><a href="/gallery/tini-pamyati.html">Тени памяти</a></li>
+        <li><a href="/gallery/dialog-form.html">Диалог форм</a></li>
+        <li><a href="/gallery/dialog-teni.html">Диалог теней</a></li>
+        <li><a href="/gallery/teni-i-svet.html">Тени и свет</a></li>
+        <li><a href="/gallery/otrazhenie-vremeni.html">Отражение времени</a></li>
+        <li><a href="/gallery/gorizontal-otrazhenij.html">Горизонт отражений</a></li>
+        <li><a href="/gallery/zolotye-otrazheniya.html">Золотые отражения</a></li>
+        <li><a href="/gallery/gorizonty-lda.html">Горизонты льда</a></li>
+      </ul>
+      <li class="menu-item has-submenu">
+        <img src="/icons/more.png" alt="" class="toggle-icon">
+        <a href="/articles.html" class="menu-link">Статьи</a>
+      </li>
+      <ul class="submenu">
+        <li><a href="/articles/interernaya-zhivopis-abstrakciya-materialy.html">Интерьерная живопись: преимущества абстракции и выбор материалов</a></li>
+        <li><a href="/articles/akriolovye-kraski-preimushhestva-uhod.html">Акриловые краски в интерьерной живописи: преимущества, экологичность и уход</a></li>
+        <li><a href="/articles/kak-podobrat-kartinu-k-intereru.html">Как подобрать картину к интерьеру: стиль, цвет, расположение</a></li>
+        <li><a href="/articles/abstrakciya-ili-pechat-original-ili-reprodukcija.html">Сравнение ручной живописи и печатных репродукций: от технологии до ценности искусства</a></li>
+      </ul>
+      <li class="menu-item">
+        <a href="/about.html">Обо мне</a>
+      </li>
+    </ul>
+  </nav>
+  <div class="sidebar-overlay"></div>
   <main class="artwork-container">
     <div class="artwork-header">
-      <h1>Горизонты льда</h1>
       <div class="artwork-meta">
         2024 &nbsp;|&nbsp; 40×50 см &nbsp;|&nbsp; Холст на деревянном подрамнике, акрил, глянцевый лак
       </div>
@@ -69,11 +109,11 @@
       <img src="/gallery/comp_28/8.png" alt="Горизонты льда — В интерьере 2">
       <img src="/gallery/comp_28/9.png" alt="Горизонты льда — Вид сзади">
     </div>
+    <div class="artwork-links">
+<a href="https://ozon.ru/t/fAIRJwY" target="_blank"><img src="../icons/ozon-icon.png" alt="Ozon">Смотреть на Ozon</a>
+    </div>
     <div class="artwork-description">
       <p>Абстрактная композиция на холсте, нанесённом на деревянный подрамник (40х50 см), выполнена в технике акрила с использованием глянцевого лака. Картина представляет собой динамичное пространство, где холодные оттенки синего и серого переплетаются с текстурой, напоминающей трещины ледяной коры или древние скальные породы. Геометрические формы — острые треугольники, словно выступающие из глубины, — создают ощущение движения и напряжения, будто ледяные кристаллы пронзают мрачную поверхность.<br><br>Текстура холста, усиленная вертикальными полосами и пятнами, придаёт произведению эффект старинного камня или замёрзшего водопада. Глянцевый лак подчёркивает блеск синих элементов, придавая им почти металлический отлив, как будто они отражают свет в бездне.<br><br>«Горизонты льда» — это не просто картина, а визуальное путешествие в холодное, загадочное пространство между реальностью и фантазией, где каждый треугольник — след времени, памяти или скрытой энергии, пробивающейся сквозь тьму.</p>
-    </div>
-    <div class="artwork-links">
-<a href="https://ozon.ru/t/fAIRJwY" target="_blank"><img src="../icons/ozon-icon.png" alt="Ozon" class="market-icon">Смотреть на Ozon</a>
     </div>
   </main>
   <div class="artwork-button-container">
@@ -81,12 +121,12 @@
     <a href="/index.html" class="artwork-btn artwork-center-btn">В галерею</a>
   </div>
   <footer class="footer">
-  <a href="/index.html"><img src="/icons/logo.png" width=100px alt="Pictura Abstracta — Главная"></a>
     <p>Свяжитесь для сотрудничества или заказа:</p>
     <div class="contacts">
       <a href="mailto:picabsart@gmail.com" class="contact-link"><img src="/icons/email-icon.png" alt="Email" class="footer-icon"><span>picabsart@gmail.com</span></a>
       <a href="https://t.me/picabsart " target="_blank" class="contact-link"><img src="/icons/telegram-icon.png" alt="Telegram" class="footer-icon"><span>Telegram</span></a>
       <a href="https://ru.pinterest.com/marinabaliq/ " target="_blank" class="contact-link"><img src="/icons/pinterest-icon.png" alt="Pinterest" class="footer-icon"><span>Pinterest</span></a>
+      <a href="https://www.ozon.ru/seller/pictura-abstracta-3298949/products/?miniapp=seller_3298949" target="_blank" class="contact-link"><img src="/icons/ozon-icon.png" alt="Ozon" class="footer-icon"><span>Ozon</span></a>
     </div>
     <div class="copyright">
       &copy; 2025 Pictura Abstracta. Все права защищены.
@@ -154,5 +194,8 @@
     });
   </script>
 
+  <script src="/js/menu.js"></script>
+  <script src="/js/masonry.pkgd.min.js"></script>
+  <script src="/js/main.js"></script>
 </body>
 </html>
