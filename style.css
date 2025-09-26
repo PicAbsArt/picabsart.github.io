@@ -472,7 +472,7 @@ body {
   gap: var(--space-s);
   margin: var(--space-m) 0;
   padding: var(--space-m);
-  background: #bbb;
+  background: var(--color-bg-card);
   color: var(--color-text-light);
   border-radius: var(--radius-l);
   font-size: var(--text-s);
@@ -483,7 +483,7 @@ body {
 
 .footer p {
   margin-bottom: var(--space-s);
-  color: var(--color-text);
+  color: var(--color-text-muted);
   font-size: var(--text-m);
 }
 
@@ -524,7 +524,7 @@ body {
 
 .footer .copyright {
   font-size: var(--text-s);
-  color: var(--color-text);
+  color: var(--color-text-muted);
 }
 
 /* ===== Лайтбокс ===== */
