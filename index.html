@@ -244,5 +244,20 @@
   <script src="/js/masonry.pkgd.min.js"></script>
   <script src="/js/main.js"></script>
   <script src="/js/menu.js"></script>
+
+  <script>
+  window.addEventListener('load', () => {
+    // Шаг 1: временно меняем стиль
+    document.body.style.opacity = '0.99';
+    
+    // Шаг 2: браузер начинает перерасчёт
+    // Шаг 3: возвращаем нормальное значение
+    setTimeout(() => {
+      document.body.style.opacity = '1';
+    }, 10);
+  });
+</script>
+  
 </body>
+
 </html>
