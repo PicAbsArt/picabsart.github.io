@@ -575,7 +575,7 @@ body {
   max-width: 100%;
   max-height: calc(80vh - 80px);
   object-fit: contain;
-  border-radius: var(--radius-m);
+  border-radius: 0;
   background: var(--color-bg);
 }
 
