@@ -12,42 +12,6 @@
   <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
   <link rel="manifest" href="/favicon/site.webmanifest">
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
-  <style>
-    :root {
-      --space-s: clamp(5px, 1vw, 10px);
-      --space-m: clamp(10px, 2vw, 15px);
-      --space-l: clamp(15px, 4vw, 20px);
-      --color-bg-card: #fff;
-      --color-border: #eaeaea;
-      --shadow-m: 0 4px 16px rgba(0, 0, 0, 0.1);
-      --radius-l: 12px;
-    }
-    .gallery {
-      display: flex;
-      flex-wrap: wrap;
-      gap: var(--space-m);
-      margin: var(--space-l) 0;
-    }
-    .gallery-item {
-      width: calc(25% - 8px);
-      break-inside: avoid;
-      background: var(--color-bg-card);
-      border-radius: var(--radius-l);
-      overflow: hidden;
-      box-shadow: var(--shadow-m);
-      margin-top: var(--space-s);
-      border: 1px solid var(--color-border);
-    }
-    @media (max-width: 1024px) {
-      .gallery-item { width: calc(33.333% - 8px); }
-    }
-    @media (max-width: 768px) {
-      .gallery-item { width: calc(50% - 8px); }
-    }
-    @media (max-width: 480px) {
-      .gallery-item { width: 100%; }
-    }
-  </style>
   <link rel="stylesheet" href="/style.css" />
   <!-- Google Analythics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-4JPCX7DDD3"></script>
@@ -131,101 +95,123 @@
   <div class="gallery" id="gallery">
     <div class="gallery-item">
       <a href="/gallery/liniya-i-prostranstvo.html" class="image-wrapper">
-        <img src="/gallery/comp_45/0.png" alt="Линия и пространство">
+        <div class ="img-container" data-aspect-ratio = "2.273">
+          <img src="/gallery/comp_45/0.png" alt="Линия и пространство">
+        </div>
       </a>
       <div class="item-content">
         <h3 class="item-title-hidden">Линия и пространство</h3>
-        <p class="item-desc">Холст на деревянном подрамнике, акрил, матовый лак (в трех частях)</p>
+        <p class="item-desc">2025 &nbsp;|&nbsp; 30×40 см &nbsp;|&nbsp; Холст на деревянном подрамнике, акрил, матовый лак (в трех частях)</p>
       </div>
     </div>
     <div class="gallery-item">
       <a href="/gallery/zerkalo-prirody.html" class="image-wrapper">
-        <img src="/gallery/comp_31/0.png" alt="Зеркало природы">
+        <div class ="img-container" data-aspect-ratio = "1.471">
+          <img src="/gallery/comp_31/0.png" alt="Зеркало природы">
+        </div>
       </a>
       <div class="item-content">
         <h3 class="item-title-hidden">Зеркало природы</h3>
-        <p class="item-desc">Холст на деревянном подрамнике, акрил, матовый лак</p>
+        <p class="item-desc">2025 &nbsp;|&nbsp; 60×40 см &nbsp;|&nbsp; Холст на деревянном подрамнике, акрил, матовый лак</p>
       </div>
     </div>
     <div class="gallery-item">
       <a href="/gallery/tishina-na-kraju.html" class="image-wrapper">
-        <img src="/gallery/comp_18/0.png" alt="Тишина на краю">
+        <div class ="img-container" data-aspect-ratio = "1.168">
+          <img src="/gallery/comp_18/0.png" alt="Тишина на краю">
+        </div>
       </a>
       <div class="item-content">
         <h3 class="item-title-hidden">Тишина на краю</h3>
-        <p class="item-desc">Холст на деревянном подрамнике, акрил, матовый лак</p>
+        <p class="item-desc">2025 &nbsp;|&nbsp; 60×50 см &nbsp;|&nbsp; Холст на деревянном подрамнике, акрил, матовый лак</p>
       </div>
     </div>
     <div class="gallery-item">
       <a href="/gallery/tini-pamyati.html" class="image-wrapper">
-        <img src="/gallery/comp_42/0.png" alt="Тени памяти">
+        <div class ="img-container" data-aspect-ratio = "1.689">
+          <img src="/gallery/comp_42/0.png" alt="Тени памяти">
+        </div>
       </a>
       <div class="item-content">
         <h3 class="item-title-hidden">Тени памяти</h3>
-        <p class="item-desc">Холст на картоне, акрил, глянцевый лак, пластиковая рама (в двух частях)</p>
+        <p class="item-desc">2024 &nbsp;|&nbsp; 25×35 см &nbsp;|&nbsp; Холст на картоне, акрил, глянцевый лак, пластиковая рама (в двух частях)</p>
       </div>
     </div>
     <div class="gallery-item">
       <a href="/gallery/dialog-form.html" class="image-wrapper">
-        <img src="/gallery/comp_5/0.png" alt="Диалог форм">
+        <div class ="img-container" data-aspect-ratio = "1.355">
+          <img src="/gallery/comp_5/0.png" alt="Диалог форм">
+        </div>
       </a>
       <div class="item-content">
         <h3 class="item-title-hidden">Диалог форм</h3>
-        <p class="item-desc">Холст на деревянном подрамнике, акрил, глянцевый лак (в двух частях)</p>
+        <p class="item-desc">2024 &nbsp;|&nbsp; 20×30 см &nbsp;|&nbsp; Холст на деревянном подрамнике, акрил, глянцевый лак (в двух частях)</p>
       </div>
     </div>
     <div class="gallery-item">
       <a href="/gallery/dialog-teni.html" class="image-wrapper">
-        <img src="/gallery/comp_37/0.png" alt="Диалог теней">
+        <div class ="img-container" data-aspect-ratio = "1.351">
+          <img src="/gallery/comp_37/0.png" alt="Диалог теней">
+        </div>
       </a>
       <div class="item-content">
         <h3 class="item-title-hidden">Диалог теней</h3>
-        <p class="item-desc">Холст на деревянном подрамнике, акрил, матовый лак (в двух частях)</p>
+        <p class="item-desc">2024 &nbsp;|&nbsp; 20×30 см &nbsp;|&nbsp; Холст на деревянном подрамнике, акрил, матовый лак (в двух частях)</p>
       </div>
     </div>
     <div class="gallery-item">
       <a href="/gallery/teni-i-svet.html" class="image-wrapper">
-        <img src="/gallery/comp_9/0.png" alt="Тени и свет">
+        <div class ="img-container" data-aspect-ratio = "0.790">
+          <img src="/gallery/comp_9/0.png" alt="Тени и свет">
+        </div>
       </a>
       <div class="item-content">
         <h3 class="item-title-hidden">Тени и свет</h3>
-        <p class="item-desc">Холст на картоне, акрил, глянцевый лак, деревянная рама</p>
+        <p class="item-desc">2024 &nbsp;|&nbsp; 30×40 см &nbsp;|&nbsp; Холст на картоне, акрил, глянцевый лак, деревянная рама</p>
       </div>
     </div>
     <div class="gallery-item">
       <a href="/gallery/otrazhenie-vremeni.html" class="image-wrapper">
-        <img src="/gallery/comp_22/0.png" alt="Отражение времени">
+        <div class ="img-container" data-aspect-ratio = "0.776">
+          <img src="/gallery/comp_22/0.png" alt="Отражение времени">
+        </div>
       </a>
       <div class="item-content">
         <h3 class="item-title-hidden">Отражение времени</h3>
-        <p class="item-desc">Холст на картоне, акрил, глянцевый лак, деревянная рама</p>
+        <p class="item-desc">2024 &nbsp;|&nbsp; 30×40 см &nbsp;|&nbsp; Холст на картоне, акрил, глянцевый лак, деревянная рама</p>
       </div>
     </div>
     <div class="gallery-item">
       <a href="/gallery/gorizontal-otrazhenij.html" class="image-wrapper">
-        <img src="/gallery/comp_14/0.png" alt="Горизонт отражений">
+        <div class ="img-container" data-aspect-ratio = "0.758">
+          <img src="/gallery/comp_14/0.png" alt="Горизонт отражений">
+        </div>
       </a>
       <div class="item-content">
         <h3 class="item-title-hidden">Горизонт отражений</h3>
-        <p class="item-desc">Холст на картоне, акрил, глянцевый лак, деревянная рама</p>
+        <p class="item-desc">2024 &nbsp;|&nbsp; 30×40 см &nbsp;|&nbsp; Холст на картоне, акрил, глянцевый лак, деревянная рама</p>
       </div>
     </div>
     <div class="gallery-item">
       <a href="/gallery/zolotye-otrazheniya.html" class="image-wrapper">
-        <img src="/gallery/comp_35/0.png" alt="Золотые отражения">
+        <div class ="img-container" data-aspect-ratio = "0.802">
+          <img src="/gallery/comp_35/0.png" alt="Золотые отражения">
+        </div>
       </a>
       <div class="item-content">
         <h3 class="item-title-hidden">Золотые отражения</h3>
-        <p class="item-desc">Холст на деревянном подрамнике, акрил, глянцевый лак</p>
+        <p class="item-desc">2024 &nbsp;|&nbsp; 40×50 см &nbsp;|&nbsp; Холст на деревянном подрамнике, акрил, глянцевый лак</p>
       </div>
     </div>
     <div class="gallery-item">
       <a href="/gallery/gorizonty-lda.html" class="image-wrapper">
-        <img src="/gallery/comp_28/0.png" alt="Горизонты льда">
+        <div class ="img-container" data-aspect-ratio = "0.798">
+          <img src="/gallery/comp_28/0.png" alt="Горизонты льда">
+        </div>
       </a>
       <div class="item-content">
         <h3 class="item-title-hidden">Горизонты льда</h3>
-        <p class="item-desc">Холст на деревянном подрамнике, акрил, глянцевый лак</p>
+        <p class="item-desc">2024 &nbsp;|&nbsp; 40×50 см &nbsp;|&nbsp; Холст на деревянном подрамнике, акрил, глянцевый лак</p>
       </div>
     </div>
   </div>
@@ -240,15 +226,22 @@
     <div class="copyright">
       &copy; 2025 Pictura Abstracta. Все права защищены.
     </div>
-  </footer>
+  </footer><script>
+  document.addEventListener('DOMContentLoaded', () => {
+    // Находим все контейнеры изображений
+    document.querySelectorAll('.img-container').forEach(container => {
+      const ratio = container.getAttribute('data-aspect-ratio');
+      if (ratio) {
+        container.style.aspectRatio = ratio;
+      } else {
+        // Если нет — используем дефолт (например, 1)
+        container.style.aspectRatio = '1';
+      }
+    });
+  });
+</script>
   <script src="/js/masonry.pkgd.min.js"></script>
   <script src="/js/main.js"></script>
   <script src="/js/menu.js"></script>
 </body>
-
 </html>
-
-
-
-
-

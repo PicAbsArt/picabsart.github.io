@@ -29,9 +29,9 @@
   --weight-bold: 700;
 
   /* ===== Адаптивные отступы через clamp() ===== */
-  --space-s: clamp(5px, 1vw, 10px);
-  --space-m: clamp(10px, 2vw, 15px);
-  --space-l: clamp(15px, 4vw, 20px);
+  --space-s: clamp(10px, 1vw, 15px);
+  --space-m: clamp(15px, 2vw, 20px);
+  --space-l: clamp(20px, 4vw, 25px);
 
   /* ===== Радиусы и прочее ===== */
   --radius-s: 6px;
@@ -335,6 +335,20 @@ body {
 
 .marketplace-buttons a:hover {
   background: var(--color-border);
+}
+
+.img-container {
+  position: relative;
+  overflow: hidden;
+  background: var(--color-bg);
+  border-radius: var(--radius-l) var(--radius-l) 0 0;
+}
+
+.img-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* не обрезаем, показываем всё */
+  transition: transform 0.5s ease;
 }
 
 /* Адаптив галереи */
