@@ -60,6 +60,7 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: var(--space-l);
+  margin: var(--space-m);
   background: var(--color-bg-card);
   position: relative;
   z-index: 10;
