@@ -19,9 +19,9 @@
   --font-base: 'Segoe UI', Arial, sans-serif;
 
   /* ===== Адаптивные размеры шрифтов через clamp() ===== */
-  --text-s: clamp(0.8rem, 1.5vw, 0.9rem);
-  --text-m: clamp(1rem, 2.5vw, 1.2rem);
-  --text-l: clamp(1.3rem, 5vw, 1.5rem);
+  --text-s: clamp(0.9rem, 2vw, 1.0rem);
+  --text-m: clamp(1rem, 3.5vw, 1.25rem);
+  --text-l: clamp(1.25rem, 5vw, 1.5rem);
 
   /* ===== Жирность — 3 уровня ===== */
   --weight-regular: 400;
