@@ -349,6 +349,7 @@ body {
   height: 100%;
   object-fit: contain; /* не обрезаем, показываем всё */
   transition: transform 0.5s ease;
+  margin: var(--space-s);
 }
 
 /* Адаптив галереи */
